@@ -1,0 +1,53 @@
+{
+  "name": "readers-in",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "gql-gen": "graphql-codegen --config codegen.yml",
+    "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "lint": "npm run lint:js"
+  },
+  "dependencies": {
+    "@babel/preset-env": "^7.12.17",
+    "@graphql-codegen/fragment-matcher": "^2.0.1",
+    "@graphql-codegen/introspection": "^1.17.6",
+    "@nuxtjs/apollo": "^4.0.1-rc.5",
+    "@nuxtjs/pwa": "^3.0.2",
+    "@nuxtjs/recaptcha": "^1.0.4",
+    "@nuxtjs/toast": "^3.3.1",
+    "apollo-cache-inmemory": "^1.6.6",
+    "apollo-cache-persist": "^0.1.1",
+    "bootstrap-vue": "^2.21.1",
+    "cookie-universal-nuxt": "^2.1.4",
+    "core-js": "^3.6.5",
+    "debounce": "^1.2.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "graphql-tag": "^2.11.0",
+    "moment": "^2.29.1",
+    "nuxt": "^2.14.6",
+    "nuxt-facebook-pixel-module": "^1.5.0",
+    "nuxt-i18n": "^6.17.0",
+    "nuxt-interpolation": "^0.2.3",
+    "nuxt-lazy-load": "^1.2.6",
+    "swiper": "^6.4.5",
+    "vue-html-to-paper": "^1.3.1",
+    "vue-select": "^3.11.2",
+    "vue-slider-component": "^3.2.11"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "^1.17.6",
+    "@nuxtjs/device": "^2.0.0",
+    "@nuxtjs/eslint-config": "^3.1.0",
+    "@nuxtjs/eslint-module": "^2.0.0",
+    "@nuxtjs/google-analytics": "^2.4.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.10.0",
+    "eslint-plugin-nuxt": "^1.0.0",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^9.0.3"
+  }
+}
