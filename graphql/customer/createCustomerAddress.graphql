@@ -1,0 +1,8 @@
+mutation createCustomerAddress(
+  $customerAddressInput: CustomerAddressInput!
+) { createCustomerAddress(
+  input:$customerAddressInput
+  ) {
+    id
+  }
+}

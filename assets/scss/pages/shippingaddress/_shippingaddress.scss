@@ -1,0 +1,97 @@
+// Define vars we'll be using
+$brand-success: #5cb85c;
+$loader-size: 7em;
+$check-height: $loader-size/2;
+$check-width: $check-height/2;
+$check-left: ($loader-size/6 + $loader-size/12);
+$check-thickness: 3px;
+$check-color: $brand-success;
+.checkout-step-shipping {
+    margin-bottom: 30px;
+}
+.shipping-address-items {
+    display: grid;
+    display: -webkit-grid;
+    grid-template-columns: repeat(auto-fill, minmax(242px, 1fr));
+    -ms-grid-columns: repeat(auto-fill, minmax(287px, 1fr));
+    -webkit-grid-template-columns: repeat(auto-fill, minmax(287px, 1fr));
+    grid-gap: 20px;
+    gap: 20px;
+    -webkit-grid-gap: 20px;
+    margin-bottom: 30px;
+    .shipping-address-item {
+        border-left: 2px solid transparent;
+        padding: 15px;
+        position: relative;
+        font-size: 16px;
+        line-height: 28px;
+        &:hover {
+            border-color: $primary;
+            background: #fff;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+        }
+        .check-mark {
+            color: $primary;
+            text-align: right;
+            font-size: 25px;
+            line-height: 26px;
+            position: absolute;
+            right: 15px;
+            top: 15px;
+        }
+    }
+    .button-section {
+        margin-top: 20px;
+        .select-shipping-item {
+            background: $primary;
+            color: $white;
+            padding: 8px 10px;
+            text-transform: uppercase;
+            font-size: 14px;
+            line-height: 16px;
+        }
+        .edit-address-link {
+            color: $primary;
+        }
+    }
+}
+.shipping-address-item.active {
+    border-color: $primary;
+    background: $white;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+.add-new-address-btn {
+    margin-bottom: 20px;
+    .action-show-popup {
+        background: $gray01;
+        color: $gray02;
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        span {
+            font-size: 18px;
+            font-weight: 600;
+            margin-right: 6px;
+        }
+    }
+}
+/* all media query start here */
+@media (max-width: 768px) {
+    .add-new-address-btn {
+        .action-show-popup {
+            padding: 6px 16px;
+            font-size: 14px;
+        }
+    }
+}
+@media (max-width: 575px) {
+    .shipping-address-items {
+        .shipping-address-item {
+            font-size: 14px;
+            line-height: 24px;
+        }
+    }
+}

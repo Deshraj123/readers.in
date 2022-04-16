@@ -1,0 +1,2170 @@
+.action.print {
+    float      : right;
+    font-size  : 16px;
+    line-height: 38px;
+
+    @include hover-focus {
+        text-decoration: underline;
+        color          : $primary;
+    }
+}
+
+.myaccount-wrapper {
+    border-bottom : 20px solid $gray01;
+    padding-bottom: 40px;
+    padding-top   : 15px;
+}
+
+.myaccount-container-main {
+    margin-top: 15px;
+    width     : 100%;
+    display   : -ms-flexbox;
+    display   : flex;
+}
+
+//======sidebar-section css====//
+.myac-left-section {
+    background  : $gray01;
+    flex        : 0 0 28.25%;
+    max-width   : 28.25%;
+    height      : 100%;
+    margin-right: 4%;
+
+    .mobile-title-collapse {
+        display: none;
+    }
+
+    .sidebar-nav {
+        list-style-type   : none;
+        padding           : 0;
+        display           : -ms-flexbox;
+        display           : flex;
+        flex-direction    : column;
+        -ms-flex-direction: column;
+        padding           : 0px 0 0px 0;
+        margin-bottom     : 0;
+
+        .navbar-row {
+            display           : -ms-flexbox;
+            display           : flex;
+            flex-direction    : column;
+            -ms-flex-direction: column;
+            position          : relative;
+
+            a {
+                font-weight: 400;
+                font-size  : 16px;
+                line-height: 22px;
+                color      : $gray02;
+                display    : block;
+                padding    : 10px 14px;
+                transition : 0.3s;
+            }
+
+            a:hover {
+                background: $primary;
+                color     : $white
+            }
+
+            li {
+                border-bottom: 1px solid $gray06;
+            }
+
+            li:hover a {
+                color: $white
+            }
+
+            .nuxt-link-exact-active,
+            .nuxt-link-active {
+                background: $primary;
+                color     : $white;
+            }
+        }
+    }
+}
+
+//=====sidebar end====//
+.myac-right-section {
+    flex              : 0 0 67.6%;
+    max-width         : 67.6%;
+    display           : -ms-flexbox;
+    display           : flex;
+    flex-direction    : column;
+    -ms-flex-direction: column;
+
+    .page-title {
+        margin-bottom: 26px;
+    }
+
+    .sub-title-row {
+        border-bottom: 1px solid $gray06;
+        margin-bottom: 15px;
+
+        .sub-title {
+            font-weight: 400;
+            font-size  : 24px;
+            color      : $black;
+        }
+    }
+
+    .account-info,
+    .newslatter-action,
+    .contact-info {
+        display           : -ms-flexbox;
+        display           : flex;
+        flex-direction    : column;
+        -ms-flex-direction: column;
+    }
+
+    .contactinfo-newslatter-container {
+        justify-content: space-between;
+        -ms-flex-pack  : justify;
+        display        : -ms-flexbox;
+        display        : flex;
+
+        .contact-info-col {
+            margin-bottom: 30px;
+            margin-right : 25px;
+        }
+    }
+
+    .Address-Book-row {
+        .sub-title-row {
+            display        : -ms-flexbox;
+            display        : flex;
+            align-items    : center;
+            -ms-flex-align : center;
+            justify-content: space-between;
+            -ms-flex-pack  : justify;
+        }
+    }
+
+    .addbook-shipp-container {
+        display        : -ms-flexbox;
+        display        : flex;
+        justify-content: space-between;
+        -ms-flex-pack  : justify;
+
+        .action-control {
+            display           : -ms-flexbox;
+            display           : flex;
+            flex-direction    : column;
+            -ms-flex-direction: column;
+        }
+
+        .add-book-col {
+            margin-right: 25px;
+        }
+    }
+
+    .sub-heading {
+        font-style   : normal;
+        font-weight  : 400;
+        font-size    : 20px;
+        line-height  : 22px;
+        color        : $black;
+        margin-bottom: 10px;
+    }
+
+    .action-control {
+        .dess-icon {
+            font-weight: 400;
+            font-size  : 16px;
+            color      : $gray06;
+        }
+
+        .link {
+            font-style : normal;
+            font-weight: 400;
+            font-size  : 16px;
+            color      : $primary;
+        }
+    }
+
+    .text {
+        font-weight: 400;
+        line-height: 22px;
+        color      : $gray02;
+    }
+
+    .form-action {
+        display        : -ms-flexbox;
+        display        : flex;
+        justify-content: space-between;
+        -ms-flex-pack  : justify;
+        width          : 100%;
+        max-width      : 100%;
+
+        .submit {
+            background        : $primary;
+            border            : none;
+            font-weight       : 600;
+            font-size         : 18px;
+            text-transform    : uppercase;
+            color             : $white;
+            padding           : 3px 10px;
+            transition        : all 0.3s ease-in-out;
+            -webkit-transition: all 0.3s ease-in-out;
+            border            : 2px solid $primary;
+            max-width         : 125px;
+            width             : 100%;
+            min-height        : 40px;
+
+            @include hover-focus {
+                color     : $primary;
+                background: $white;
+            }
+        }
+
+        .back {
+            font-weight       : 400;
+            font-size         : 16px;
+            color             : #414141;
+            border            : 2px solid $secondary;
+            width             : 100%;
+            max-width         : 125px;
+            min-height        : 40px;
+            font-weight       : 600;
+            justify-content   : center;
+            align-items       : center;
+            -ms-flex-pack     : center;
+            -ms-flex-align    : center;
+            display           : -ms-flexbox;
+            display           : flex;
+            transition        : all 0.3s ease-in-out;
+            -webkit-transition: all 0.3s ease-in-out;
+            text-transform    : uppercase;
+            background        : $white;
+
+            @include hover-focus {
+                color : $primary;
+                border: 2px solid $primary;
+
+            }
+        }
+
+        .add-cart-btn {
+            width: 100%;
+        }
+    }
+
+    .left-right-section-main {
+        display  : -ms-flexbox;
+        display  : flex;
+        width    : 100%;
+        max-width: 100%;
+    }
+
+    .table-wrapper {
+        width          : 100%;
+        margin-bottom  : 25px;
+        border-collapse: collapse;
+
+        th {
+            padding    : 18px 0px;
+            text-align : center;
+            font-weight: 600;
+            font-size  : 16px;
+            color      : $black;
+        }
+
+        td,
+        th {
+            border    : 1px solid $gray06;
+            padding   : 8px;
+            text-align: center;
+        }
+
+        .item-info-td {
+            font-weight: 400;
+            font-size  : 14px;
+            color      : $gray02;
+        }
+    }
+
+    .checkbox {
+        display         : -ms-flexbox;
+        display         : flex;
+        align-items     : center;
+        -ms-flex-align  : center;
+        gap             : 10px;
+        grid-gap        : 10px;
+        -webkit-grid-gap: 10px;
+    }
+
+    .check-input {
+        appearance  : none;
+        border      : 1px solid $gray02;
+        padding     : 6px;
+        position    : relative;
+        display     : inline-block;
+        margin-right: 10px;
+        width       : 15px;
+        height      : 15px;
+    }
+
+    .check-input:focus {
+        outline: none;
+    }
+
+    .check-input:checked {
+        background: $white;
+        border    : 1px solid $primary;
+        color     : $primary;
+    }
+
+    .check-input:checked:after {
+        content    : "\f00c";
+        font-family: "Font Awesome 5 Pro";
+        font-size  : 10px;
+        position   : absolute;
+        top        : -1px;
+        right      : 1px;
+    }
+
+    .delete-address {
+        padding-left: 20px;
+        position    : relative;
+
+        &::before {
+            content   : "";
+            width     : 1px;
+            height    : 13px;
+            position  : absolute;
+            left      : 8px;
+            top       : 6px;
+            background: $primary;
+        }
+    }
+}
+
+.delete-yes {
+    color           : $white;
+    padding         : 6px 27px;
+    font-weight     : 600;
+    text-transform  : uppercase;
+    background-color: $primary;
+    width           : 100%;
+    display         : inline-block;
+    margin-top      : 5px;
+    margin-bottom   : 10px;
+
+}
+
+//==========My Order css start ===========//
+.myorder-container {
+    .mobile-table-wrapper {
+        display: none;
+    }
+
+    .action-td {
+        .action-icon {
+            display        : -ms-flexbox;
+            display        : flex;
+            flex-wrap      : wrap;
+            -ms-flex-wrap  : wrap;
+            justify-content: center;
+            -ms-flex-pack  : center;
+            -ms-flex-align : center;
+
+            .edit-action,
+            .remove-action {
+                margin-right: 5%;
+                display     : inline-block;
+            }
+        }
+
+        .link {
+            font-weight: 400;
+            font-size  : 14px;
+            line-height: 22px;
+            color      : $primary;
+        }
+    }
+
+    .myordr-item-list {
+        display        : -ms-flexbox;
+        display        : flex;
+        justify-content: space-between;
+        align-items    : center;
+        -ms-flex-align : center;
+
+        .item-no {
+            font-weight: 400;
+            font-size  : 14px;
+            color      : $gray02;
+        }
+    }
+
+    .myordr-item-dropdown {
+        .item-no-dropdown {
+            background : $white;
+            border     : 1px solid $gray02;
+            font-weight: 400;
+            font-size  : 14px;
+            height     : 32px;
+        }
+
+        .item-no-dropdown:focus {
+            outline: none;
+        }
+    }
+}
+
+//==vieworder css start==//
+.vieworder-container {
+    .viewordr-item-list {
+        display        : -ms-flexbox;
+        display        : flex;
+        justify-content: space-between;
+        align-items    : center;
+        -ms-flex-align : center;
+    }
+
+    .vieworder-block-content {
+        justify-content: space-between;
+        display        : -ms-flexbox;
+        display        : flex;
+        -ms-flex-pack  : justify;
+        flex-wrap      : wrap;
+
+        .order-info-col {
+            flex         : 0 0 30%;
+            max-width    : 30%;
+            margin-bottom: 15px;
+        }
+
+        .address {
+            font-weight: normal;
+            font-size  : 14px;
+            line-height: 22px;
+            color      : $secondary;
+            max-width  : 100%;
+            width      : 100%;
+        }
+    }
+}
+
+//==========My downladable product css start ===========//
+.downloadable-products-container {
+    .mobile-table-wrapper {
+        display: none;
+    }
+
+    .table-wrapper {
+        .dwnload-td {
+            .download-link.link {
+                color: $primary;
+            }
+
+            .dwnld-name {
+                padding-left: 8px;
+            }
+
+            .download-item {
+                display        : -ms-flexbox;
+                display        : flex;
+                justify-content: center;
+                -ms-flex-align : center;
+                -ms-flex-pack  : justify;
+                flex-wrap      : wrap;
+                -ms-flex-wrap  : wrap;
+
+                .item-name {
+                    margin-right: 10%;
+                }
+            }
+        }
+    }
+
+    .dwnlodable-product-item-list {
+        display        : -ms-flexbox;
+        display        : flex;
+        justify-content: space-between;
+        -ms-flex-pack  : justify;
+        -ms-flex-align : center;
+        align-items    : center;
+    }
+
+    .dwnlodable-product-item-list {
+        .item-no {
+            font-weight: 400;
+            font-size  : 14px;
+            color      : $gray02;
+        }
+    }
+
+    .dwnloadable-item-dropdown {
+        .item-no-dropdown {
+            background : $white;
+            border     : 1px solid $gray02;
+            font-weight: 400;
+            font-size  : 14px;
+            height     : 32px;
+        }
+
+        .item-no-dropdown:focus {
+            outline: none;
+        }
+    }
+}
+
+//====MyWishlist Css start====//
+.mywishlist-container {
+    .wishlist-grid {
+        width: 100%;
+    }
+
+    .wishlist-product-items {
+        margin   : 0 -10px;
+        display  : flex;
+        flex-wrap: wrap;
+        grid-gap : unset;
+        grid-gap : 0;
+
+        .product-item {
+            max-width    : 50%;
+            width        : 100%;
+            display      : flex;
+            display      : -ms-flexbox;
+            padding      : 0 10px;
+            margin-bottom: 25px;
+        }
+
+        .product-item-actions {
+            display        : -ms-flexbox;
+            display        : flex;
+            -ms-flex-align : center;
+            align-items    : center;
+            -ms-flex-pack  : justify;
+            justify-content: space-between;
+            margin         : 20px 0 0;
+
+            .action {
+                color: $gray02;
+
+                @include hover-focus {
+                    color: $primary;
+                }
+            }
+        }
+    }
+
+    .wishlist-product-item-info:hover .wishlist-link {
+        transform: translate3d(0, 0, 0);
+    }
+
+    .wishlist-action {
+
+        .wishlist-edit,
+        .wishlist-remove {
+
+            .fa-pencil-alt,
+            .fa-trash-alt {
+                font-size  : 18px;
+                color      : $white;
+                font-weight: 300;
+            }
+        }
+
+        .wishlist-link {
+            margin-bottom     : 0;
+            transform         : translate3d(60px, 0, 0);
+            transition        : all 0.4s ease-in-out;
+            -webkit-transition: all 0.4s ease-in-out;
+        }
+    }
+
+    .mywishlist-item-list {
+        display        : -ms-flexbox;
+        display        : flex;
+        justify-content: space-between;
+        -ms-flex-pack  : justify;
+        align-items    : center;
+        -ms-flex-align : center;
+    }
+
+    .mywishlist-item-list {
+        .item-no {
+            font-weight: 400;
+            font-size  : 14px;
+            color      : $gray02;
+        }
+    }
+
+    .mywishlist-item-dropdown {
+        .item-no-dropdown {
+            background : $white;
+            border     : 1px solid $gray02;
+            font-weight: 400;
+            font-size  : 14px;
+            height     : 32px;
+        }
+
+        .item-no-dropdown:focus {
+            outline: none;
+        }
+    }
+
+    .wishlist-action-toolbar {
+        margin-bottom: 25px;
+
+        .wishlist-btn {
+            display        : -ms-flexbox;
+            display        : flex;
+            justify-content: space-between;
+            -ms-flex-pack  : justify;
+        }
+
+        .action-btn {
+            background    : $primary;
+            padding       : 10px 15px;
+            border        : none;
+            font-weight   : 600;
+            font-size     : 14px;
+            line-height   : 16px;
+            text-transform: uppercase;
+            color         : $white;
+        }
+
+        .action-btn:focus {
+            outline: none;
+        }
+    }
+
+    textarea {
+        border       : 1px solid $gray06;
+        border-radius: 0;
+        padding      : 15px;
+        max-height   : 54px;
+
+        &:focus {
+            outline      : none;
+            border-radius: 0;
+        }
+    }
+
+    .product-item-comment {
+        margin-bottom: 15px;
+    }
+
+    .limiter {
+        .space-box {
+            margin-top: 15px;
+        }
+    }
+}
+
+//==wishlist share all start==//
+.Wish_share_container {
+    .block-title {
+        border-bottom: 1px solid $gray06;
+        margin-bottom: 15px;
+    }
+
+    .title {
+        font-weight   : normal;
+        font-size     : 20px;
+        color         : #000;
+        padding-bottom: 9px;
+        display       : inline-block;
+    }
+
+    .textarea-group {
+        display           : -ms-flexbox;
+        display           : flex;
+        flex-direction    : column;
+        -ms-flex-direction: column;
+        width             : 100%;
+    }
+
+    .label {
+        font-weight   : 400;
+        font-size     : 14px;
+        text-transform: uppercase;
+        color         : $secondary;
+        margin-bottom : 10px;
+    }
+
+    .input-textarea {
+        padding      : 10px 15px;
+        width        : 100%;
+        height       : 40px;
+        border       : 1px solid $secondary;
+        margin-bottom: 15px;
+        min-height   : 150px;
+
+        @include hover-focus {
+            outline: none;
+        }
+    }
+
+    .form-action .submit {
+        background        : $primary;
+        padding           : 4px 15px;
+        font-weight       : 600;
+        font-size         : 18px;
+        text-transform    : uppercase;
+        color             : $white;
+        transition        : all 0.3s ease-in-out;
+        -webkit-transition: all 0.3s ease-in-out;
+        border            : 2px solid $primary;
+
+        @include hover-focus {
+            color     : $primary;
+            background: $white;
+        }
+    }
+}
+
+//==address book css start==//
+.myaddbook-container {
+    .myaddbook-block-content {
+        display        : -ms-flexbox;
+        display        : flex;
+        justify-content: space-between;
+        -ms-flex-pack  : justify;
+        margin-bottom  : 30px;
+
+        .shipping-add-col,
+        .billing-add-col {
+            flex     : 0 0 45%;
+            max-width: 45%;
+        }
+
+        .address {
+            color: $gray02;
+        }
+
+        .change-add-link {
+            font-weight: normal;
+            font-size  : 16px;
+            line-height: 40px;
+            color      : $primary;
+
+            @include hover-focus {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    .myaddbook-block-title {
+        font-weight  : normal;
+        font-size    : 24px;
+        color        : $black;
+        border-bottom: 1px solid $gray06;
+        margin-bottom: 15px;
+
+        .title {
+            margin-bottom: 10px;
+            display      : inline-block;
+        }
+    }
+
+    .block-addresses-list {
+        .shipping-add-col {
+            margin-bottom: 10px;
+        }
+
+        .block-title {
+            font-weight   : normal;
+            font-size     : 24px;
+            color         : $black;
+            border-bottom : 1px solid $gray06;
+            padding-bottom: 10px;
+            margin-bottom : 15px;
+        }
+
+        .address {
+            line-height: 22px;
+            color      : $secondary;
+            max-width  : 45%;
+            width      : 100%;
+
+        }
+
+        .add-adreess {
+            display: inline-block;
+            width  : auto;
+
+            .add-address-link {
+                color             : $white;
+                padding           : 6px 24px;
+                font-weight       : 600;
+                font-size         : 16px;
+                text-transform    : uppercase;
+                background-color  : $primary;
+                width             : 100%;
+                display           : -ms-flexbox;
+                display           : flex;
+                justify-content   : center;
+                -ms-flex-pack     : center;
+                -ms-flex-align    : center;
+                border            : 2px solid $primary;
+                transition        : all 0.3s ease-in-out;
+                -webkit-transition: all 0.3s ease-in-out;
+
+                @include hover-focus {
+                    border    : 2px solid $primary;
+                    color     : $primary;
+                    background: transparent;
+                }
+            }
+        }
+    }
+}
+
+//==add-new-addresses css start==//
+.add_new_add-form {
+    flex-wrap    : wrap;
+    -ms-flex-wrap: wrap;
+
+    .input-group .label:after,
+    .dropdown-box .label:after {
+        content    : "*";
+        color      : $primary;
+        margin-left: 3px;
+    }
+
+    .input-group-company {
+        .company-label:after {
+            content: unset;
+        }
+    }
+
+    .contactinfo-left-section .title,
+    .address-right-section .title {
+        font-weight   : normal;
+        font-size     : 24px;
+        color         : $black;
+        padding-bottom: 9px;
+        display       : inline-block;
+    }
+
+    .contact-block-title,
+    .add-block-title {
+        border-bottom: 1px solid $gray06;
+        margin-bottom: 15px;
+    }
+
+    .address-right-section {
+        .checkbox-control-newadd {
+            margin-bottom: 23px;
+        }
+
+        .input-group-add {
+            .address-control {
+                display           : -ms-flexbox;
+                display           : flex;
+                flex-direction    : column;
+                -ms-flex-direction: column;
+                gap               : 10px;
+                grid-gap          : 10px;
+                -webkit-grid-gap  : 10px;
+            }
+        }
+
+        .dropdown-box {
+            .label {
+                font-weight   : normal;
+                font-size     : 14px;
+                text-transform: uppercase;
+                color         : $gray02;
+                margin-bottom : 10px;
+            }
+
+            .dropdown-control {
+                position: relative;
+
+                .select-dropdown {
+                    padding      : 5px 10px;
+                    width        : 100%;
+                    height       : 40px;
+                    border       : 1px solid $gray02;
+                    margin-bottom: 23px;
+                    appearance   : none;
+                    font-size    : 14px;
+                    color        : $gray02;
+                    white-space  : normal;
+                    line-height  : 14px;
+                }
+
+                .select-dropdown:focus {
+                    outline: none;
+                }
+            }
+
+            .dropdown-control:after {
+                content    : "\f107";
+                font-family: "Font Awesome 5 Pro";
+                display    : inline-block;
+                font-weight: 400;
+                font-size  : 16px;
+                color      : $gray02;
+                position   : absolute;
+                right      : 10px;
+                top        : 9px;
+            }
+        }
+
+        .billing-checkbox {
+            margin-bottom: 10px;
+        }
+
+        .checkbox-add {
+            display         : -ms-flexbox;
+            display         : flex;
+            align-items     : center;
+            -ms-flex-align  : center;
+            gap             : 10px;
+            grid-gap        : 10px;
+            -webkit-grid-gap: 10px;
+
+            label {
+                margin-bottom: 0;
+                font-weight  : normal;
+                font-size    : 14px;
+                color        : $gray02;
+            }
+        }
+    }
+
+    .add-address-submit {
+        .submit {
+            padding  : 6px 30px;
+            font-size: 18px;
+        }
+    }
+}
+
+//==edit account-info css start ==//
+.quotetion-form .left-section-form.account-info-left-section {
+    flex     : 0 0 100%;
+    max-width: 100%;
+}
+
+.account-info-form {
+    flex-wrap    : wrap;
+    -ms-flex-wrap: wrap;
+    width        : 100%;
+
+    .account-info-main {
+        display         : -ms-flexbox;
+        display         : flex;
+        width           : 100%;
+        max-width       : 100%;
+        gap             : 3%;
+        grid-gap        : 3%;
+        -webkit-grid-gap: 3%;
+    }
+
+    .input-group .label:after {
+        content    : "*";
+        color      : $primary;
+        margin-left: 3px;
+    }
+
+    .title {
+        font-weight   : normal;
+        font-size     : 20px;
+        color         : $black;
+        padding-bottom: 9px;
+        display       : inline-block;
+    }
+
+    .block-title {
+        border-bottom: 1px solid $gray06;
+        margin-bottom: 15px;
+    }
+
+    .email-checkbox {
+        margin-bottom: 15px;
+    }
+
+    .email-pass-checkbox {
+        margin-bottom: 30px;
+
+        .label {
+            margin-bottom : 0;
+            text-transform: uppercase;
+        }
+    }
+
+    .account-info-discription {
+        margin-top : 20px;
+        margin-top : 20px;
+        font-weight: normal;
+        font-size  : 14px;
+        color      : #414141;
+
+        .info-txt-link {
+            color: $primary;
+        }
+
+        .save-btn {
+            background : #de1f16;
+            color      : #fff;
+            max-width  : 100px;
+            height     : 40px;
+            width      : 100%;
+            font-size  : 16px;
+            font-weight: 600;
+        }
+
+        .info-txt {
+            margin-bottom: 20px;
+            display      : inline-block;
+        }
+    }
+}
+
+//==stored payment method css start==//
+.payment_method-container {
+    .mobile-table-wrapper {
+        display: none;
+    }
+
+    .action-td {
+        .link {
+            font-weight: 400;
+            font-size  : 14px;
+            line-height: 22px;
+            color      : $primary;
+        }
+    }
+}
+
+//==billing agreement css start==//
+.billing_agreement-container {
+    .billing-label {
+        font-weight  : normal;
+        font-size    : 16px;
+        color        : $secondary;
+        margin-bottom: 10px;
+    }
+
+    .select-dropdown {
+        background        : $white;
+        border            : 1px solid $secondary;
+        font-weight       : 400;
+        font-size         : 14px;
+        color             : $secondary;
+        padding           : 0 30px 0 10px;
+        height            : 40px;
+        appearance        : none;
+        -webkit-appearance: none;
+        -moz-appearance   : none;
+        width             : 100%;
+
+        @include hover-focus {
+            outline: none;
+        }
+    }
+
+    .dropdown-control {
+        position     : relative;
+        margin-bottom: 20px;
+    }
+
+    .dropdown-control:after {
+        content    : "\f107";
+        font-family: "Font Awesome 5 Pro";
+        display    : inline-block;
+        font-weight: 400;
+        font-size  : 16px;
+        color      : $secondary;
+        position   : absolute;
+        right      : 10px;
+        top        : 10px;
+    }
+}
+
+//==my product review start==//
+.Product_review-container {
+    .mobile-table-wrapper {
+        display: none;
+    }
+
+    .table-wrapper {
+        .item-info-td {
+            display        : -ms-flexbox;
+            display        : flex;
+            justify-content: center;
+            -ms-flex-pack  : center;
+            -ms-flex-align : center;
+        }
+    }
+
+    .action-td {
+        .link {
+            font-weight: 400;
+            font-size  : 14px;
+            line-height: 22px;
+            color      : $primary;
+        }
+    }
+}
+
+//==review details css start==//
+.review_details-container {
+    .review_details_form {
+        display      : -ms-flexbox;
+        display      : flex;
+        width        : 100%;
+        margin-bottom: 30px;
+    }
+
+    .Review-item {
+        flex        : 1 1 40%;
+        max-width   : 40%;
+        margin-right: 20px;
+    }
+
+    .item-review-details {
+        flex     : 1 1 60%;
+        max-width: 60%;
+
+        .product-name {
+            margin-bottom: 30px;
+            font-size    : 25px;
+        }
+    }
+
+    .product-reviews-summary {
+        display       : -ms-flexbox;
+        display       : flex;
+        flex-wrap     : wrap;
+        align-items   : center;
+        -ms-flex-align: center;
+        -ms-flex-wrap : wrap;
+
+        .rating-col {
+            display: -ms-flexbox;
+            display: flex;
+            margin : 0 15px 10px 0;
+        }
+    }
+
+    .reviews-number,
+    .add-review {
+        font-weight: 400;
+        font-size  : 14px;
+        color      : $secondary;
+    }
+
+    .block-your-review {
+        .block-title {
+            font-weight   : normal;
+            font-size     : 24px;
+            color         : #000;
+            border-bottom : 1px solid $gray06;
+            padding-bottom: 10px;
+            margin-bottom : 10px;
+        }
+
+        .my-rating {
+            display      : -ms-flexbox;
+            display      : flex;
+            margin-bottom: 20px;
+            align-items  : center;
+        }
+
+        .Rating {
+            margin-right: 20px;
+            font-weight : 400;
+            font-size   : 14px;
+            color       : $secondary;
+        }
+
+        .my-review-title {
+            font-weight  : 600;
+            font-size    : 16px;
+            color        : $secondary;
+            margin-bottom: 10px;
+        }
+
+        .my-review,
+        .my-review-date {
+            font-size    : 14px;
+            font-weight  : 400;
+            color        : $secondary;
+            line-height  : 24px;
+            margin-bottom: 5px;
+        }
+    }
+}
+
+//==my subscription css start==//
+.Newslatter_subscription-container {
+    .subscription-title {
+        font-weight   : normal;
+        font-size     : 20px;
+        color         : $secondary;
+        border-bottom : 1px solid $gray06;
+        padding-bottom: 9px;
+    }
+
+    .subscription-checkbox {
+        display       : -ms-flexbox;
+        display       : flex;
+        align-items   : center;
+        -ms-flex-align: center;
+        margin-bottom : 30px;
+        position      : relative;
+
+        .label {
+            font-weight  : normal;
+            font-size    : 16px;
+            color        : $secondary;
+            margin-bottom: 0;
+        }
+    }
+
+    .subscription-action {
+        display        : -ms-flexbox;
+        display        : flex;
+        justify-content: space-between;
+        -ms-flex-pack  : justify;
+        align-items    : center;
+        -ms-flex-align : center;
+
+        .submit {
+            background        : $primary;
+            padding           : 4px 30px;
+            border            : none;
+            font-weight       : 600;
+            font-size         : 18px;
+            text-transform    : uppercase;
+            color             : $white;
+            transition        : all 0.3s ease-in-out;
+            -webkit-transition: all 0.3s ease-in-out;
+            border            : 2px solid $primary;
+
+            @include hover-focus {
+                color     : $primary;
+                background: $white;
+            }
+        }
+
+        .back-link {
+            font-weight: normal;
+            font-size  : 18px;
+            line-height: 22px;
+            color      : $secondary;
+        }
+    }
+}
+
+//==mobile no update css start==//
+.update_mobileno-container {
+    .input-group {
+        display           : -ms-flexbox;
+        display           : flex;
+        flex-direction    : column;
+        -ms-flex-direction: column;
+        margin-bottom     : 30px;
+    }
+
+    .label {
+        font-weight   : 400;
+        font-size     : 14px;
+        text-transform: uppercase;
+        color         : $secondary;
+        margin-bottom : 10px;
+    }
+
+    .input-text {
+        padding        : 10px 15px;
+        width          : 100%;
+        height         : 40px;
+        border         : 1px solid $secondary;
+        margin-bottom  : 5px;
+        -moz-appearance: textfield;
+    }
+
+    .input-text:focus {
+        outline: none;
+        border : 1px solid $primary;
+    }
+
+    .mno_update-txt {
+        font-size: 12px;
+        color    : $secondary;
+    }
+}
+
+//update mobile no end//
+.table-container {
+    overflow-x: auto;
+    width     : 100%;
+}
+
+//==open support css start==//
+.open_support-form {
+    .table-container {
+        overflow-x: auto;
+        max-width : 100%;
+        width     : 100%;
+
+        .description-td {
+            text-align: left;
+        }
+    }
+
+    .input-group {
+        display           : -ms-flexbox;
+        display           : flex;
+        flex-direction    : column;
+        -ms-flex-direction: column;
+        margin-bottom     : 23px;
+    }
+
+    .label {
+        font-weight   : 400;
+        font-size     : 14px;
+        text-transform: uppercase;
+        color         : $secondary;
+        margin-bottom : 10px;
+    }
+
+    .input-text {
+        padding      : 10px 15px;
+        width        : 100%;
+        height       : 40px;
+        border       : 1px solid $secondary;
+
+        &:focus {
+            border-color: $primary;
+            outline     : none;
+        }
+    }
+
+    .input-textarea {
+        min-height: 100px;
+
+        &:focus {
+            border-color: $primary;
+            outline     : none;
+        }
+    }
+
+    .table-wrapper {
+        .date-td {
+            .item-info-td {
+                white-space: nowrap;
+            }
+        }
+    }
+
+    .form-control_os {
+        margin-bottom: 40px;
+    }
+
+    /* new css*/
+
+    .two-files{
+        display: flex;
+        display: -ms-flexbox;
+        width: 100%;
+    }
+
+    .dropdown-box {
+        flex: 0 0 calc(50% - 1.5%);
+        margin-right:3%;
+        .dropdown-control {
+            position: relative;
+            .select-dropdown{
+                padding: 5px 10px;
+                width: 100%;
+                height: 40px;
+                border: 1px solid #414141;
+                margin-bottom: 23px;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                font-size: 14px;
+                color: #414141;
+                white-space: normal;
+                line-height: 16px;
+                &:focus-visible{
+                    outline: none;
+                }
+            }
+            &::after{
+                content: "\f107";
+                font-family: "Font Awesome 5 Pro";
+                display: inline-block;
+                font-weight: 400;
+                font-size: 16px;
+                color: #414141;
+                position: absolute;
+                right: 10px;
+                top: 9px; 
+            }
+        }
+    }
+
+}
+
+.password-strength-meter {
+    background-color: #f4f4f4;
+    height          : 32px;
+    line-height     : 32px;
+    padding         : 0 10px;
+    position        : relative;
+    z-index         : 1;
+}
+
+.vieworder_form {
+    margin-top : 20px;
+    border-top : 1px solid #ddd;
+    padding-top: 20px;
+
+    .title {
+        padding-bottom: 15px;
+        font-weight   : 600;
+        display       : inline-block;
+    }
+
+    .table-wrapper {
+        tfoot {
+            th {
+                text-align: left !important;
+            }
+        }
+    }
+
+    .mark {
+        background-color: transparent;
+    }
+
+    .vieworder-body {
+        .item-info {
+            .item-td {
+                text-align: left !important;
+            }
+        }
+    }
+}
+
+//open support end//
+//*========================all media query start here==============================*//
+@media (max-width: 1299px) {
+    .wishlist-grid {
+        .product-item-details {
+            .add-to-cart {
+                .input-qty {
+                    width: 40px;
+                }
+            }
+
+            .add-to-cart {
+                .submit {
+                    font-size  : 12px;
+                    line-height: 14px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .mywishlist-container {
+        .wishlist-product-items {
+            flex-wrap: wrap;
+
+            .product-item {
+                max-width: 50%;
+            }
+        }
+    }
+}
+
+@media (min-width: 769px) {
+    #collapse-sidebar {
+        display: block !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .not-found-wrapper {
+        padding-top: 30px;
+    }
+
+    .vieworder_form {
+        margin-top: 0;
+    }
+
+    .action.print {
+        line-height: 27px;
+    }
+
+    .mywishlist-container {
+        .wishlist-grid {
+            .product-item-details {
+                .product-price {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+
+    .myaccount-wrapper {
+        border-bottom : 10px solid $gray01;
+        padding-bottom: 30px;
+        padding-top   : 0;
+    }
+
+    .myaccount-container-main {
+        flex-direction    : column;
+        -ms-flex-direction: column;
+        margin-top        : 0;
+
+        .sidebar-main:after {
+            content   : "";
+            height    : 100%;
+            position  : absolute;
+            left      : -100vw;
+            right     : -100vw;
+            z-index   : -1;
+            top       : 0;
+            background: #f4f4f4;
+        }
+    }
+
+    .myac-left-section {
+        flex     : none;
+        max-width: none;
+        position : relative;
+        margin   : 0 -15px;
+
+        .mobile-title-collapse {
+            display : block;
+            padding : 15px 15px;
+            margin  : 0;
+            position: relative;
+
+            &.not-collapsed {
+                .collapse-title {
+                    transition        : all 0.3s ease-in-out;
+                    -webkit-transition: all 0.3s ease-in-out;
+
+                    &::after {
+                        transform         : rotate(180deg);
+                        transition        : all 0.3s ease-in-out;
+                        -webkit-transition: all 0.3s ease-in-out;
+                    }
+                }
+            }
+        }
+
+        .collapse-title:after {
+            content           : "\f107";
+            font-family       : "Font Awesome 5 Pro";
+            display           : inline-block;
+            font-weight       : 400;
+            font-size         : 18px;
+            line-height       : 22px;
+            color             : $secondary;
+            position          : absolute;
+            right             : 0px;
+            top               : 0;
+            transition        : all 0.3s ease-in-out;
+            -webkit-transition: all 0.3s ease-in-out;
+        }
+
+        .mobile-title-collapse:after {
+            content      : "";
+            position     : absolute;
+            border-bottom: 1px solid $gray06;
+            bottom       : 0;
+            right        : -100vw;
+            left         : -100vw;
+        }
+
+        .mobile-title-collapse:focus {
+            outline: none;
+        }
+
+        .collapse-title {
+            margin        : 0;
+            font-size     : 18px;
+            color         : $secondary;
+            position      : relative;
+            text-transform: uppercase;
+        }
+
+        .sidebar-nav {
+            position: relative;
+            padding : 0 0 0 0;
+        }
+
+        .sidebar-nav:after {
+            content      : "";
+            position     : absolute;
+            border-bottom: 1px solid $gray06;
+            bottom       : 0;
+            right        : -100vw;
+            left         : -100vw;
+        }
+
+        .sidebar-nav .navbar-row a {
+            padding  : 8px 15px;
+            font-size: 14px;
+            position : relative;
+            z-index  : 1;
+        }
+
+        .sidebar-nav .navbar-row a:hover:after,
+        .nuxt-link-active:after {
+            background: $primary;
+            content   : "";
+            position  : absolute;
+            right     : -100vw;
+            left      : -100vw;
+            z-index   : -1;
+            top       : 0;
+            height    : 100%;
+            color     : $white;
+        }
+
+        .nuxt-link-exact-active {
+            position: relative;
+            z-index : 1;
+        }
+    }
+
+    .myac-right-section {
+        flex     : 0 0 100%;
+        max-width: 100%;
+
+        .page-title {
+            margin-bottom: 20px;
+            margin-top   : 20px;
+        }
+
+        .sub-title-row {
+            .sub-title {
+                font-size: 20px;
+            }
+        }
+
+        .sub-heading {
+            font-size: 16px;
+        }
+
+        .text {
+            font-size: 14px;
+        }
+
+        .left-right-section-main {
+            flex-direction    : column;
+            -ms-flex-direction: column;
+        }
+    }
+
+    //==myorder mq start==//
+    .myac-right-section {
+
+        .table-wrapper {
+            border: 0;
+
+            thead {
+                border  : none;
+                clip    : rect(0 0 0 0);
+                height  : 1px;
+                margin  : -1px;
+                overflow: hidden;
+                padding : 0;
+                position: absolute;
+                width   : 1px;
+            }
+
+            tr {
+                display      : block;
+                margin-bottom: 0.625em;
+                border       : 1px solid $gray06;
+            }
+
+            td {
+                border         : none;
+                align-items    : center;
+                text-align     : right;
+                justify-content: space-between;
+                max-width      : 100%;
+                display        : -ms-flexbox;
+                display        : flex;
+                -ms-flex-align : center;
+                -ms-flex-pack  : justify;
+            }
+
+            td::before {
+                content     : attr(data-label);
+                float       : left;
+                font-weight : 400;
+                color       : #000;
+                text-align  : left;
+                margin-right: 10px;
+            }
+
+            .item-body {
+                display  : inline-block;
+                width    : 100%;
+                max-width: 100%;
+            }
+
+            th {
+                font-size: 14px;
+            }
+        }
+
+        .limiter {
+            .space-box {
+                margin-top: 0;
+            }
+        }
+    }
+
+    .myorder-container{
+        .action-td{
+            .action-icon {
+                .edit-action,
+                .remove-action{
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    .open_support-form {
+        .table-wrapper {
+            tr {
+                display      : block;
+                margin-bottom: 0.625em;
+                border       : 1px solid $gray06;
+                border-bottom: 0;
+            }
+
+            td {
+                border         : none;
+                border-bottom  : 1px solid $gray06;
+                align-items    : flex-start;
+                -ms-flex-align : flex-start;
+                text-align     : left;
+                justify-content: space-between;
+                max-width      : 100%;
+                display        : -ms-flexbox;
+                display        : flex;
+                -ms-flex-pack  : justify;
+
+                &:before {
+                    margin-right: 15px;
+                }
+            }
+
+            .description-td {
+                flex-direction    : column;
+                -ms-flex-direction: column;
+            }
+        }
+
+        .form-control_os {
+            margin-bottom: 30px;
+        }
+    }
+
+    .myorder-container {
+        .action-td {
+            .action-icon {
+                flex-direction    : column;
+                -ms-flex-direction: column;
+            }
+        }
+    }
+
+    //==vieworder start==//
+    .vieworder-container {
+        padding-top: 10px;
+
+        tfoot {
+            .grand_total_tr {
+                display        : -ms-flexbox;
+                display        : flex;
+                justify-content: space-between;
+                -ms-flex-pack  : justify;
+                margin         : 0;
+                border-top     : 0;
+
+                th {
+                    border: 0;
+                }
+            }
+
+            .grandttl-td {
+                border: none;
+            }
+
+            .grandttl-th {
+                border   : none;
+                font-size: 14px;
+            }
+        }
+
+        .vieworder-block-content {
+            grid-gap        : 0;
+            gap             : 0;
+            -webkit-grid-gap: 0px;
+
+            .order-info-col {
+                flex          : 0 0 40%;
+                max-width     : 40%;
+                padding-bottom: 15px;
+
+                h4 {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+
+    .myac-right-section {
+        .table-wrapper {
+            .vieworder-body {
+                tr {
+                    margin-bottom: 0;
+                    border-top   : 0;
+                }
+            }
+        }
+    }
+
+    //==downloadable product css start==//
+    .downloadable-products-container {
+        .table-wrapper {
+            .download-item {
+                display           : -ms-flexbox;
+                display           : flex;
+                flex-direction    : column;
+                -ms-flex-direction: column;
+                gap               : 10px;
+                grid-gap          : 10px;
+                -webkit-grid-gap  : 10px;
+            }
+        }
+    }
+
+    //==mywishlist css start==//
+    .mywishlist-container {
+        .wishlist-product-items {
+            width: auto;
+        }
+
+        .wishlist-action-toolbar {
+            .wishlist-btn {
+                flex-direction    : column;
+                -ms-flex-direction: column;
+
+                .action-btn {
+                    margin-bottom: 10px;
+                }
+            }
+
+            .action-btn {
+                width      : 100%;
+                text-align : center;
+                padding    : 8px 15px;
+                font-size  : 12px;
+                line-height: 16px;
+            }
+        }
+
+        .wishlist-product-img {
+            .wishlist-action {
+                .wishlist-link {
+                    height: 30px;
+                    width : 30px;
+
+                    .fa-pencil-alt,
+                    .fa-trash-alt,
+                    .fa-shopping-basket {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+
+    .Wish_share_container .form-action .submit {
+        width: 100%;
+    }
+
+    //==myaddress book css strt==//
+    .myaddbook-container {
+        .myaddbook-block-title {
+            font-size: 18px;
+        }
+
+        .block-addresses-list {
+            .block-title {
+                font-size: 18px;
+            }
+
+            .address {
+                font-size: 14px;
+                max-width: 100%;
+                width    : 100%;
+            }
+
+            .t-number {
+                font-size: 14px;
+            }
+        }
+
+        .block-addresses-list {
+            .add-adreess {
+                .add-address-link {
+                    max-width: 100%;
+                    padding  : 5px 24px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    //==add new address css start==//
+    .add_new_add-form {
+
+        .contactinfo-left-section .title,
+        .address-right-section .title {
+            font-size: 20px;
+        }
+
+        .address-right-section {
+            .address-submit {
+                .submit {
+                    font-weight: 400;
+                }
+            }
+
+            .dropdown-box {
+                .label {
+                    margin-bottom: 5px;
+                    font-size    : 12px;
+                }
+
+                .dropdown-control {
+                    .select-dropdown {
+                        height       : 32px;
+                        margin-bottom: 16px;
+                    }
+                }
+
+                .dropdown-control:after {
+                    top: 5px;
+                }
+            }
+        }
+    }
+
+    //==edit account info css start==//
+    .account-info-form {
+        .title {
+            font-size: 18px;
+        }
+
+        .right-section-form .form-action {
+            margin: 0px 0 0px 0;
+        }
+
+        .account-info-main {
+            flex-direction    : column;
+            -ms-flex-direction: column;
+        }
+    }
+
+    //==billing agreements start==//
+    .billing_agreement-container {
+        .select-dropdown {
+            height: 32px;
+        }
+
+        .billing-label {
+            font-size: 14px;
+        }
+
+        .dropdown-control {
+            margin-bottom: 12px;
+        }
+
+        .dropdown-control:after {
+            top: 6px;
+        }
+    }
+
+    //==update mobile no start==//
+    .update_mobileno-container .input-text {
+        height : 32px;
+        padding: 5px 5px;
+    }
+
+    //==open support start==//
+    .open_support-form {
+        .input-text {
+            height: 32px;
+        }
+
+        .input-group {
+            margin-bottom: 12px;
+        }
+
+        .label {
+            margin-bottom: 5px;
+        }
+    }
+
+    .myac-right-section {
+        .open_support-form {
+            .table-wrapper {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+@media (max-width: 544px) {
+    .myac-right-section {
+        .contactinfo-newslatter-container {
+            flex-direction    : column;
+            -ms-flex-direction: column;
+            gap               : 0px;
+            grid-gap          : 0px;
+            -webkit-grid-gap  : 0px;
+            margin-bottom     : 22px;
+
+            .contact-info-col {
+                margin-bottom: 22px;
+                margin-right : 0;
+            }
+        }
+
+        .add-book-col {
+            margin-bottom: 15px;
+        }
+
+        .Address-Book-row {
+            .sub-title-row {
+                flex-direction    : column;
+                -ms-flex-direction: column;
+                align-items       : unset;
+                -ms-flex-align    : unset;
+                padding-bottom    : 10px;
+            }
+        }
+
+        .addbook-shipp-container {
+            flex-direction    : column;
+            -ms-flex-direction: column;
+            gap               : 0px;
+            grid-gap          : 0px;
+            -webkit-grid-gap  : 0px;
+
+            .add-book-col {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .myaddbook-container {
+        .myaddbook-block-content {
+            flex-direction    : column;
+            -ms-flex-direction: column;
+            margin-bottom     : 20px;
+
+            .shipping-add-col,
+            .billing-add-col {
+                flex     : 0 0 100%;
+                max-width: 100%;
+            }
+        }
+
+    }
+
+    .vieworder-container {
+        .vieworder-block-content {
+            flex-direction    : column;
+            -ms-flex-direction: column;
+
+            .order-info-col {
+                flex         : 0 0 100%;
+                max-width    : 100%;
+                margin-bottom: 14px;
+            }
+
+            .t-number {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .review_details-container {
+        .review_details_form {
+            flex-direction    : column;
+            -ms-flex-direction: column;
+            margin-bottom     : 0;
+        }
+
+        .Review-item,
+        .item-review-details {
+            flex         : 0 0 100%;
+            max-width    : 100%;
+            margin-bottom: 20px;
+
+            .product-name {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+//for mywishlist//
+@media (max-width: 460px) {
+    .myaddbook-container {
+        .block-addresses-list {
+            .add-adreess {
+                width     : 100%;
+                margin-top: 10px;
+            }
+        }
+    }
+}
+
+@media (max-width: 520px) {
+    .mywishlist-container {
+        .wishlist-product-items {
+            .product-item {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+.revenue-wrapper {
+    .revenue-bg {
+        text-align    : center;
+        margin-bottom : 30px;
+        font-style    : normal;
+        font-weight   : 600;
+        font-size     : 18px;
+        margin-top    : 33px;
+        text-transform: capitalize;
+        height        : 15vh;
+    }
+}
+
+@media (max-width: 460px) {
+    .revenue-wrapper {
+        .revenue-bg {
+            font-size: 14px;
+        }
+    }
+}

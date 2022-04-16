@@ -1,0 +1,30 @@
+query availableShippingMethods(
+  $cartId: String!
+){
+  available_shipping_methods(
+    cart_id: $cartId
+  ){
+    carrier_code
+    carrier_title
+    method_code
+    method_title
+    error_message
+    amount{
+      value
+      currency
+    }
+    base_amount{
+      value
+      currency
+    }
+    price_excl_tax{
+      value
+      currency
+    }
+    price_incl_tax{
+      value
+      currency
+    }
+    available
+  }
+}

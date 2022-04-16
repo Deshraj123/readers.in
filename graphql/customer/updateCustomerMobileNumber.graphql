@@ -1,0 +1,10 @@
+mutation updateCustomerMobileNumber(
+  $mobile: String!
+){
+  updateCustomerMobileNumber(
+    mobile: $mobile
+  ){
+    error
+    message
+  }
+}

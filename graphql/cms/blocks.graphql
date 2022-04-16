@@ -1,0 +1,13 @@
+query blocks(
+  $identifiers: [String]
+) {
+
+  cmsBlocks(identifiers: $identifiers) {
+    items {
+      identifier
+      title
+      content
+    }
+  }
+
+}

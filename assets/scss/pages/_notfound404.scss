@@ -1,0 +1,74 @@
+.notfoundpage-404-wrapper {
+    border-bottom: 20px solid #f4f4f4;
+}
+.notfound-404-container {
+    min-height: 581px;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    -ms-flex-pack: center;
+    -ms-flex-align: center;
+    align-items: center;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    .title {
+        font-size: 80px;
+        font-weight: 600;
+        color: #000;
+        margin-bottom: 10px;
+    }
+    .icon-404 {
+        color: #EF3E36;
+        font-size: 70px;
+        display: inline-block;
+        margin: 0 10px;
+    }
+    .subtitle {
+        font-weight: 600;
+        font-size: 25px;
+        margin-bottom: 30px;
+        .bold {
+            color: #000;
+        }
+    }
+    .desc-404 {
+        max-width: 426px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 400;
+        color: #414141;
+    }
+    .tell-us-link {
+        text-decoration: underline;
+        color: #414141;
+    }
+    .link-404 {
+        font-weight: normal;
+        font-size: 18px;
+        text-decoration-line: underline;
+        color: #EF3E36;
+    }
+    .links-404-bottom {
+        font-size: 18px;
+        font-weight: normal;
+    }
+}
+@media(max-width:768px) {
+    .notfound-404-container {
+        min-height: 440px;
+        .title {
+            font-size: 65px;
+        }
+        .icon-404 {
+            font-size: 60px;
+        }
+        .subtitle {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        .desc-404,
+        .link-404 {
+            font-size: 16px;
+        }
+    }
+}

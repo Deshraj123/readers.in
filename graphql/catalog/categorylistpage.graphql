@@ -1,0 +1,144 @@
+query categorylistpage(
+  $categoryFilters: CategoryFilterInput
+  $pageSize: Int
+  $currentPage: Int
+  $sort: ProductAttributeSortInput
+) {
+
+  categoryList(filters: $categoryFilters) {
+    name
+    url_key
+    id
+    path
+    product_count
+    description
+    default_sort_by
+    image
+    meta_title
+    meta_keywords
+    meta_description
+    display_mode
+    level
+    landing_page
+    is_anchor
+    url_path
+    url_suffix
+    available_sort_by
+    filter_price_range
+    breadcrumbs{
+      category_id
+      category_level
+      category_name
+      category_url_key
+      category_url_path
+    }
+    cms_block {
+      content
+      identifier
+      title
+    }
+    children {
+      id
+      image
+      name
+      url_key
+      path
+      product_count
+      description
+      default_sort_by
+      meta_title
+      meta_keywords
+      meta_description
+      cms_block {
+        content
+        identifier
+        title
+      }
+      children{
+        id
+        image
+        name
+        url_key
+        path
+        product_count
+        description
+        default_sort_by
+        meta_title
+        meta_keywords
+        meta_description
+        cms_block {
+          content
+          identifier
+          title
+        }
+      }
+    }
+    products(
+      pageSize: $pageSize
+      currentPage: $currentPage
+      sort: $sort
+    ) {
+      total_count
+      items {
+        id
+        name
+        sku
+        url_key
+        url_path
+        type_id
+        product_label
+        special_price
+        review_count
+        stock_status
+        reviews{
+          items{
+            nickname
+            summary
+            text
+            average_rating
+            ratings_breakdown{
+              name
+              value
+            }
+            created_at
+          }
+        }
+        image {
+          url
+          label
+        }
+        small_image {
+          url
+          label
+        }
+        price {
+          minimalPrice {
+            amount {
+              value
+              currency
+            }
+          }
+          maximalPrice {
+            amount {
+              value
+              currency
+            }
+          }
+          regularPrice {
+            amount {
+              value
+              currency
+            }
+          }
+        }
+      }
+      page_info {
+        current_page
+        page_size
+        total_pages
+      }
+    }
+  }
+
+
+}

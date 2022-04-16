@@ -1,0 +1,7 @@
+query requestquoteproducts($filter: ProductAttributeFilterInput, $pageSize: Int) {
+  products(filter: $filter, pageSize: $pageSize) {
+    items {
+      name
+    }
+  }
+}

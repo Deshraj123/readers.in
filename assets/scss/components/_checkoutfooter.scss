@@ -1,0 +1,21 @@
+.footer-copyright-container {
+    background: #f4f4f4;
+    .copyright-title {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        text-align: center;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 19px;
+        text-align: center;
+        color: $secondary;
+    }
+}
+@media (max-width: 768px) {
+    .footer-copyright-container {
+        .copyright-title {
+            font-size: 12px;
+            line-height: 16px;
+        }
+    }
+}

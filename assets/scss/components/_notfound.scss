@@ -1,0 +1,55 @@
+.product_not_found_container {
+    width: 100%;
+    max-width: 100%;
+    .back_btn {
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: flex-end;
+        -ms-flex-pack: end;
+    }
+    .back {
+        font-weight: 400;
+        font-size: 16px;
+        color: #414141;
+        border: 1px solid #DE1F16;
+        width: 100%;
+        max-width: 125px;
+        min-height: 40px;
+        justify-content: center;
+        align-items: center;
+        -ms-flex-pack: center;
+        -ms-flex-align: center;
+        display: -ms-flexbox;
+        display: flex;
+    }
+}
+.pro_not_found {
+    max-width: 100%;
+    width: 100%;
+    .not-found-text {
+        background: #FDF0D5;
+        width: 100%;
+        max-width: 100%;
+        display: -ms-flexbox;
+        display: flex;
+        padding: 13px 15px;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 19px;
+        color: #6F4400;
+        position: relative;
+        padding-left: 50px;
+        align-items: center;
+        -ms-flex-align: center;
+        margin-bottom: 20px;
+        &::before {
+            content: "\f071";
+            font-family: 'Font Awesome 5 Pro';
+            font-size: 18px;
+            color: #C07600;
+            font-weight: 400;
+            position: absolute;
+            left: 15px;
+        }
+    }
+}

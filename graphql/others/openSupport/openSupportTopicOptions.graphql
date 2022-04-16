@@ -1,0 +1,6 @@
+query openSupportTopicOptions {
+    openSupportTopicOptions {
+        label
+        value
+    }
+}

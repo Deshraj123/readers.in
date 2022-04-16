@@ -1,0 +1,30 @@
+mutation openSupportCreate(
+  $title: String!
+  $description: String!
+  $topic: String!
+  $order: String!
+){
+  openSupportCreate(
+    title: $title
+    description: $description
+    topic: $topic
+    order: $order
+  ){
+     page_info{
+      current_page
+      page_size
+      total_pages
+    }
+    tickets {
+      ticket_id
+      answer
+      creation_date
+      description
+      is_active
+      title
+      topic
+      order
+      customer_email
+    }
+  }
+}

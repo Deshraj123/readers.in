@@ -1,0 +1,72 @@
+.rating-review-container {
+    .rating-summary {
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        justify-content: space-between;
+        -ms-flex-pack: justify;
+        margin-bottom: 0;
+        .rating-col {
+            display: -ms-inline-flexbox;
+            display: inline-flex;
+            position: relative;
+            &::before {
+                left: 0;
+                position: absolute;
+                top: 0px;
+                z-index: 1;
+                -webkit-font-smoothing: antialiased;
+                letter-spacing: 2px;
+                width: 100%;
+                max-width: 90px;
+                content: "\f005""\f005""\f005""\f005""\f005";
+                font-weight: 700;
+                font-family: 'Font Awesome 5 Pro';
+                color: #7B7B7B;
+                display: flex;
+            }
+        }
+        .rating-review {
+            display: block;
+            overflow: hidden;
+            &::before {
+                position: relative;
+                z-index: 2;
+                -webkit-font-smoothing: antialiased;
+                color: $primary;
+                font-family: 'Font Awesome 5 Pro';
+                letter-spacing: 2px;
+                width: 100%;
+                max-width: 90px;
+                top: 0px;
+                left: 0;
+                content: "\f005""\f005""\f005""\f005""\f005";
+                font-weight: 700;
+                display: flex;
+            }
+        }
+        .rating_value {
+            border: 0;
+            clip: rect(0, 0, 0, 0);
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            width: 1px;
+        }
+    }
+}
+@media(max-width:768px) {
+    .rating-review-container {
+        .rating-summary {
+            .rating-result::before {
+                width: 85px;
+            }
+            .rating-review::before {
+                width: 85px;
+            }
+        }
+    }
+}

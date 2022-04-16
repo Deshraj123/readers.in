@@ -1,0 +1,24 @@
+mutation requestQuote(
+  $companyName: String!
+  $contactName: String!
+  $email: String!
+  $telephone: String
+  $message: String
+  $budget: Boolean
+  $file: RequestFile
+  $productDetails: [ProductDetails]
+){
+  requestQuote(
+    companyName: $companyName
+    contactName: $contactName
+    email: $email
+    telephone: $telephone
+    message: $message
+    budget: $budget
+    file: $file
+    productDetails: $productDetails
+  ){
+    error
+    message
+  }
+}

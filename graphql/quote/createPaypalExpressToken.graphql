@@ -1,0 +1,13 @@
+mutation createPaypalExpressToken(
+  $input: PaypalExpressTokenInput!
+) {
+  createPaypalExpressToken(
+    input: $input
+  ) {
+    token
+    paypal_urls {
+      start
+      edit
+    }
+  }
+}

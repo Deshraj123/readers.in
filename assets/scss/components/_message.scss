@@ -1,0 +1,66 @@
+.message_wrapper {
+    width: 100%;
+    max-width: 100%;
+    display: none;
+}
+.successful_container {
+    margin: 0 0 10px;
+    padding: 5px 14px 5px 14px;
+    display: block;
+    font-size: 12px;
+    background: #E5EFE5;
+    color: #006400;
+    position: relative;
+    font-weight: 400;
+    .successful {
+        display: -ms-flexbox;
+        display: flex;
+        align-items: center;
+        -ms-flex-align: center;
+    }
+    .successful:before {
+        content: "\f00c";
+        font-family: 'Font Awesome 5 Pro';
+        font-size: 16px;
+        color: 006400;
+        margin-right: 10px;
+        display: inline-block;
+    }
+}
+.error_container {
+    margin: 0 0 10px;
+    padding: 5px 14px 5px 14px;
+    display: block;
+    font-size: 12px;
+    background: #f5e0dffa;
+    color: #de1f16;
+    position: relative;
+    font-weight: 400;
+    .Successful_error {
+        display: -ms-flexbox;
+        display: flex;
+        align-items: center;
+        -ms-flex-align: center;
+    }
+    .Successful_error::before {
+        content: "\f00d";
+        font-family: 'Font Awesome 5 Pro';
+        font-size: 16px;
+        color: #de1f16;
+        position: relative;
+        left: 4px;
+        margin-right: 16px;
+        display: inline-block;
+    }
+}
+@media(max-width:768px) {
+    .successful_container,
+    .error_container {
+        font-size: 14px;
+        margin: 10px 0px;
+    }
+    .Successful_error::before,
+    .successful:before {
+        font-size: 18px;
+    }
+}

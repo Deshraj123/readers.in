@@ -1,0 +1,14 @@
+mutation shareWishlist(
+  $emails: String!
+  $message: String
+  $rssRule: Boolean
+){
+  shareWishlist(
+    emails: $emails
+    message: $message
+    rss_rule: $rssRule
+  ){
+    message
+    error
+  }
+}

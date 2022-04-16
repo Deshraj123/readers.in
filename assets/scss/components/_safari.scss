@@ -1,0 +1,81 @@
+@mixin input_redius {
+    -webkit-border-radius: 0;
+    -webkit-appearance: none;
+}
+//=== css for iphone(safari browser) inputs===//
+.control{
+    .input, .searchresult-qty, .input-text, .input-textarea{
+        @include input_redius;
+    }
+}
+.mysearch-bar{
+    #main_search{
+        @include input_redius;
+    }
+}
+.details-qty {
+    #qty{
+        @include input_redius;
+    }
+ }
+.vs__selected-options{
+    .vs__search{
+        @include input_redius;
+    }
+}
+.dropdown-control{
+    .select-dropdown{
+        @include input_redius;
+    }
+}
+select, .input-otp, .check-input, .input-textarea, .checkbox, .input-text, #location_pincode{
+    @include input_redius;
+}
+.input-qty{
+    .qtyinput{
+        @include input_redius;
+    }
+}
+@media(min-resolution:.001dpcm){
+  @supports (-webkit-appearance:none)
+{
+    .control {
+         .input, .searchresult-qty, .input-text, .input-textarea{
+            @include input_redius;
+       }
+    }
+    .mysearch-bar{
+        #main_search{
+            @include input_redius;
+        }
+    }
+    .details-qty {
+        #qty{
+            @include input_redius;
+        }
+     }
+    .dropdown-control{
+        .select-dropdown{
+            @include input_redius;
+        }
+    }
+    .input-textarea, .input-otp, select, .check-input, .checkbox, .input-text, #location_pincode{
+        @include input_redius;
+    }
+    .input-qty{
+        .qtyinput{
+            @include input_redius;
+        }
+    }
+    .product-img, .searchresult-item-image, .minicart-items, .home-banner-img{
+        img{
+        width: 100%;
+        height: auto;
+      }
+    }
+}}
+
+
+
+
+

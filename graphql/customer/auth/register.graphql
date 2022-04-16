@@ -1,0 +1,42 @@
+mutation createCustomer(
+  $customerData: CustomerInput!
+) { createCustomer(
+  input:$customerData
+  ) {
+    customer{
+      firstname
+      lastname
+      middlename
+      email
+      gender
+      is_subscribed
+      date_of_birth
+      default_billing
+      default_shipping
+      mobile
+      addresses {
+        city
+        company
+        country_code
+        default_billing
+        default_shipping
+        fax
+        firstname
+        lastname
+        middlename
+        id
+        postcode
+        region {
+          region
+          region_code
+        }
+        street
+        telephone
+        vat_id
+        website
+        trade_organization
+      }
+    }
+
+  }
+}

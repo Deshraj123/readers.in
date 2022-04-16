@@ -1,0 +1,10 @@
+mutation registerOTP(
+  $mobile: String!
+){
+  registerOTP(
+    mobile: $mobile
+  ){
+    error
+    message
+  }
+}

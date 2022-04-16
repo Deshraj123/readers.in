@@ -1,0 +1,270 @@
+.footer-navbar-container {
+    display: flex;
+    display: -ms-flexbox;
+    -ms-flex-pack: center;
+    justify-content: space-between;
+    -ms-flex-pack: justify;
+    padding: 60px 0 55px 0px;
+    width: 100%;
+    background: #fff;
+    .footer-link-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+            position: relative;
+            margin: 3px 0;
+        }
+        a {
+            display: inline-block;
+        }
+    }
+    .footer-link-title {
+        margin-bottom: 30px;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        margin-top: 33px;
+    }
+    .logo-para {
+        font-size: 14px;
+        font-weight: 400;
+        color: $secondary;
+        line-height: 24px;
+    }
+    a {
+        font-size: 14px;
+        font-weight: 400;
+        color: $secondary;
+        line-height: 28px;
+        @include hover-focus {
+            color: $primary;
+        }
+    }
+    .contect-us-footer {
+        .address {
+            line-height: 1.3 !important;
+            margin-bottom: 10px;
+        }
+        .footer-link-list li {
+            padding-left: 37px;
+            line-height: 32px;
+            font-weight: normal;
+            font-size: 14px;
+            color: $secondary;
+            max-width: 172px;
+            width: 100%;
+            .footer-font-icon {
+                padding-right: 20px;
+                font-size: 18px;
+                color: $primary;
+                font-weight: 300;
+                position: absolute;
+                line-height: 22px;
+                left: 0;
+                top: 6px;
+            }
+            .fal.fa-phone-alt {
+                transform: rotate(22deg);
+            }
+        }
+    }
+}
+.footer-logo-content {
+    max-width: 285px;
+    width: 100%;
+    .footer-logo {
+        margin-bottom: 25px;
+    }
+}
+.copyright-footer {
+    background: #f4f4f4;
+    .footer-copyright-container {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        padding: 30px 0px 25px;
+        .copyright-para {
+            max-width: 76%;
+            margin: 0 auto;
+            line-height: 22px;
+        }
+        .copyright-title {
+            padding-top: 0px;
+            padding-bottom: 0px;
+            font-weight: 600;
+            font-size: 16px;
+            color: #333333;
+            margin-bottom: 15px;
+        }
+    }
+}
+//=============for footer media query start here=============//
+@include media-breakpoint-down("md") {
+    .copyright-footer {
+        .footer-copyright-container {
+            .copyright-para {
+                max-width: 100%;
+            }
+        }
+    }
+    .footer-container {
+        .container {
+            max-width: 100%;
+        }
+    }
+    .footer-navbar-container {
+        justify-content: space-between;
+        -ms-flex-pack: justify;
+        flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        .footer-logo-content {
+            max-width: 50%;
+            width: 100%;
+        }
+        .top-categories {
+            max-width: 30%;
+            width: 100%;
+        }
+        .information {
+            max-width: 30%;
+            width: 100%;
+        }
+        .help {
+            max-width: 30%;
+            width: 100%;
+        }
+        .contect-us-footer {
+            max-width: 30%;
+            width: 100%;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .footer-navbar-container {
+        padding: 23px 0 20px 0px;
+        .logo-para {
+            margin-bottom: 16px;
+        }
+        .footer-link-title {
+            font-size: 16px;
+            margin-bottom: 10px;
+            margin-top: 28px;
+        }
+        .contect-us-footer {
+            .address {
+                margin-bottom: 0;
+            }
+            .footer-link-list {
+                li {
+                    .footer-font-icon {
+                        font-size: 16px;
+                        top: 4px;
+                    }
+                }
+            }
+        }
+    }
+    .footer-logo-content {
+        max-width: 53%;
+        width: 100%;
+        .footer-logo {
+            margin-bottom: 14px;
+        }
+    }
+    .copyright-footer {
+        .footer-copyright-container {
+            padding: 0;
+            .copyright-title {
+                font-size: 14px;
+                line-height: 18px;
+                font-weight: normal;
+                margin-bottom: 0;
+                padding: 15px 0;
+            }
+            .copyright-para {
+                display: none;
+            }
+        }
+    }
+}
+@media (max-width: 520px) {
+    .footer-navbar-container {
+        .contect-us-footer {
+            width: 100%;
+            max-width: 100%;
+            .footer-link-list {
+                .address {
+                    padding-bottom: 5px;
+                }
+                li {
+                    padding-left: 26px;
+                    line-height: 23px !important;
+                    font-size: 12px;
+                    max-width: 100%;
+                }
+            }
+        }
+        .footer-logo-content {
+            width: 100%;
+            max-width: 100%;
+            text-align: justify;
+            .footer-logo {
+                max-height: 47px;
+                width: auto;
+            }
+        }
+        .footer-link-list {
+            li {
+                .footer-font-icon {
+                    position: unset;
+                }
+            }
+        }
+        .footer-link-title {
+            margin-top: 15px;
+        }
+        a {
+            font-size: 12px;
+            line-height: 16px;
+        }
+        .contect-us-footer {
+            .footer-link-list {
+                li {
+                    .footer-font-icon {
+                        top: 0;
+                    }
+                }
+            }
+        }
+        .logo-para {
+            margin-bottom: 0;
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+    .copyright-footer {
+        .footer-copyright-container {
+            .copyright-title {
+                font-size: 12px;
+            }
+        }
+    }
+}
+@media (max-width: 475px) {
+    .footer-navbar-container {
+        flex-direction: column;
+        -ms-flex-direction: column;
+        .contect-us-footer,
+        .help,
+        .information,
+        .top-categories {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+    .footer-logo-content {
+        width: 100%;
+        max-width: 100%;
+    }
+}

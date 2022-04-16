@@ -1,0 +1,9 @@
+query mobileIsAvailable(
+  $mobile: String!
+){
+  mobileIsAvailable(
+    mobile: $mobile
+  ){
+    mobile_is_available
+  }
+}

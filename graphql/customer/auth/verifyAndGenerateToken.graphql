@@ -1,0 +1,11 @@
+mutation verifyAndGenerateToken(
+  $otp: String!
+  $mobile: String!
+) {
+  verifyAndGenerateToken(
+    otp: $otp
+    mobile: $mobile
+  ) {
+    token
+  }
+}

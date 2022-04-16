@@ -1,0 +1,178 @@
+.table-checkout-shipping-method {
+    margin-bottom: 30px;
+    .row {
+        margin: -1px;
+        border: 1px solid #DDDDDD;
+        height: 52px;
+        .col-methods {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            max-width: 181px;
+            margin: -1px;
+            .method {
+                display: flex;
+                align-items: center;
+                label {
+                    margin: 0;
+                }
+                .price-text {
+                    padding: 0 0 0 30px;
+                }
+            }
+        }
+        .col-method {
+            width: 100%;
+            max-width: 184px;
+            display: flex;
+            align-items: center;
+        }
+        .col-carrier {
+            display: flex;
+            align-items: center;
+        }
+    }
+    td {
+        padding: 0 15px;
+        margin: -1px -1px -1px 0px;
+        border: 0;
+        font-size: 14px;
+        line-height: 19px;
+        font-weight: 400;
+        color: $secondary;
+        border: 1px solid #DDDDDD;
+    }
+    .method {
+        input[type="radio"]:checked,
+        input[type="radio"]:not(:checked) {
+            position: absolute;
+            left: 0;
+            opacity: 0;
+            visibility: hidden;
+        }
+        input[type="radio"]:checked+label,
+        input[type="radio"]:not(:checked)+label {
+            position: relative;
+            padding-left: 30px;
+            cursor: pointer;
+            line-height: 15px;
+            display: inline-block;
+        }
+        input[type="radio"]:not(:checked)+label:after {
+            opacity: 0;
+            transform: scale(0);
+        }
+        input[type="radio"]:checked+label:after {
+            content: '';
+            width: 8px;
+            height: 8px;
+            background: #EF3E36;
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            border-radius: 100%;
+            transition: all 0.2s ease;
+            border: 1px solid $primary;
+        }
+        input[type="radio"]:checked+label:before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            border: 1px solid $primary;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+        }
+        input[type="radio"]:not(:checked)+label:before{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 14px;
+            height: 14px;
+            border: 1px solid $gray02;
+            border-radius: 50%;
+            background: #fff;
+        }
+    }
+}
+.methods-shipping {
+    margin-top: 7px; 
+}
+.checkout-wrapper {
+    .shipping-method-col {
+        margin-bottom: 30px;
+    }
+    .shipping-method {
+        .step-title {
+            margin: 0;
+        } 
+        .policy-link{
+            a{
+                text-decoration: underline;
+                @include hover-focus{
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
+/* all media query start here*/
+
+@media (max-width: 1299px) {
+    .table-checkout-shipping-method {
+        .row {
+            .col-method {
+                padding-left: 15px;
+                display: flex;
+                align-items: center;
+            }
+            .col-carrier {
+                padding-left: 15px;
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .checkout-wrapper{
+    .shipping-method {
+        .step-title {
+            margin: 0 10px 10px 0;
+        }
+    }
+}
+    .checkout-next-btn .chk-button {
+        padding: 8px 28px;
+    }
+    .checkout-wrapper {
+        .shipping-method-col {
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+        }
+    }
+    .table-checkout-shipping-method {
+        margin-bottom: 20px;
+        .row {
+            .col-method {
+                width: 100%;
+            }
+            td {
+                padding: 0 10px;
+                font-size: 12px;
+                line-height: 16px;
+            }
+        }
+    }
+    .primary {
+        width: 100%;
+        .checkout-next {
+            padding: 8px 15px;
+            width: 100%;
+        }
+    }
+    .shipping-method{
+        margin-top: 20px;
+    }
+}
