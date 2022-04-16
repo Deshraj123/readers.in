@@ -1,0 +1,9 @@
+mutation loginOTP(
+  $mobile: String!
+) { loginOTP(
+  mobile:$mobile
+  ) {
+    error
+    message
+  }
+}

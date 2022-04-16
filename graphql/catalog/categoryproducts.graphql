@@ -1,0 +1,114 @@
+query categoryproducts($filter: ProductAttributeFilterInput, $pageSize: Int, $currentPage: Int, $search: String) {
+  products(filter: $filter, pageSize: $pageSize, currentPage: $currentPage, search: $search) {
+    items {
+      id
+      sku
+      name
+      type_id
+      stock_status
+      meta_title
+      meta_keyword
+      meta_description
+      review_count
+      reviews{
+        items{
+          nickname
+          summary
+          text
+          average_rating
+          ratings_breakdown{
+            name
+            value
+          }
+          created_at
+        }
+      }
+      short_description {
+        html
+      }
+      description {
+        html
+      }
+      image {
+        url
+        label
+      }
+      small_image {
+        url
+        label
+      }
+      thumbnail {
+        url
+        label
+      }
+      media_gallery{
+        url
+        label
+      }
+      media_gallery_entries {
+        id
+        media_type
+        label
+        position
+        disabled
+        types
+        file
+        content {
+          base64_encoded_data
+          type
+          name
+        }
+      }
+      canonical_url
+      url_key
+      url_path
+      price {
+        minimalPrice {
+          amount {
+            value
+            currency
+          }
+        }
+        maximalPrice {
+          amount {
+            value
+            currency
+          }
+        }
+        regularPrice {
+          amount {
+            value
+            currency
+          }
+        }
+      }
+      price_tiers{
+        discount {
+          amount_off
+          percent_off
+        }
+        final_price {
+          currency
+          value
+        }
+        quantity
+      }
+    }
+    page_info{
+      current_page
+      page_size
+      total_pages
+    }
+    aggregations {
+      attribute_code
+      count
+      label
+      options {
+        count
+        label
+        value
+      }
+    }
+    total_count
+  }
+}

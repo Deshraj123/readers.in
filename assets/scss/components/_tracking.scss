@@ -1,0 +1,236 @@
+.post_order_wrap-main {
+	background: #fff;
+	padding: 30px;
+	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+	margin-bottom: 30px;
+	margin-top: 30px;
+}
+.tracking-img {
+	width: 40px;
+	height: auto;
+	margin-right: 10px;
+}
+.tracking-status {
+	font-size: 18px;
+	margin-bottom: 30px;
+	display: block;
+	border-bottom: 1px solid #CFD4D6;
+	padding-bottom: 20px;
+	color: #555;
+	font-weight: 600;
+}
+.post_order_wrap {
+	max-width: 650px;
+	width: 100%;
+}
+.tracking-table {
+	border-collapse: collapse;
+	width: 100%;
+	td {
+		border: 1px solid #ddd;
+		padding: 8px;
+		text-align: center;
+		font-size: 14px;
+		font-weight: 500;
+		color: #414141;
+		a {
+			font-size: 14px;
+			font-weight: 500;
+			color: #414141;
+			&:hover {
+				color: #de1f16;
+			}
+		}
+	}
+	th {
+		border: 1px solid #ddd;
+		padding: 8px;
+		text-align: center;
+		font-size: 16px;
+		font-weight: 600;
+		padding-top: 12px;
+		padding-bottom: 12px;
+		background-color: rgba(244, 244, 244, 0.97);
+		color: #000;
+	}
+}
+.radio_box {
+	display: inline-block;
+	margin-right: 15px;
+	input[type=radio] {
+		&:checked {
+			position: absolute;
+			left: 0;
+			opacity: 0;
+			visibility: hidden;
+		}
+		&:not(:checked) {
+			position: absolute;
+			left: 0;
+			opacity: 0;
+			visibility: hidden;
+		}
+		&:checked+label {
+			position: relative;
+			padding-left: 25px;
+			cursor: pointer;
+			line-height: 15px;
+			display: inline-block;
+			font-weight: 600;
+			font-size: 15px;
+			&:before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				border: 1px solid #de1f16;
+				width: 14px;
+				height: 14px;
+				border-radius: 50%;
+			}
+			&:after {
+				content: "";
+				width: 8px;
+				height: 8px;
+				background: #ef3e36;
+				position: absolute;
+				top: 3px;
+				left: 3px;
+				border-radius: 100%;
+				transition: all .2s ease;
+				border: 1px solid #de1f16;
+			}
+		}
+		&:not(:checked)+label {
+			position: relative;
+			padding-left: 25px;
+			cursor: pointer;
+			line-height: 15px;
+			display: inline-block;
+			font-weight: 600;
+			font-size: 15px;
+			&:before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: 14px;
+				height: 14px;
+				border: 1px solid #414141;
+				border-radius: 50%;
+				background: #fff;
+			}
+		}
+	}
+}
+.pull-left {
+	display: inline-block;
+	margin-right: 15px;
+	font-size: 17px;
+	font-weight: 600;
+}
+.submit-button {
+	background: #de1f16;
+	height: 54px;
+	min-width: 198px;
+	width: 50%;
+	font-weight: 600;
+	font-size: 20px;
+	line-height: 27px;
+	text-transform: uppercase;
+	color: #fff;
+	transition: all .3s ease-in-out;
+	border: 2px solid #de1f16;
+	margin-top: 40px;
+	margin-bottom: 40px;
+	&:hover {
+		color: #de1f16;
+		border: 2px solid #de1f16;
+		background: #fff;
+		outline: none;
+	}
+}
+.track_bg {
+	margin-bottom: 10px;
+}
+.order_input {
+	.input-text {
+		width: 100%;
+		height: 40px;
+		padding: 0 20px 0 15px;
+		border: 1px solid #6d6d6d;
+		box-sizing: border-box;
+		border-radius: 2px;
+		color: #414141;
+		background: #fff;
+		-webkit-appearance: none;
+		-moz-appearance: textfield;
+		appearance: none;
+		&:focus {
+			outline: none;
+		}
+	}
+	input[type=email] {
+		&:focus {
+			border-color: #de1f16 !important;
+		}
+	}
+	input[type=number] {
+		&:focus {
+			border-color: #de1f16 !important;
+		}
+	}
+	input[type=text] {
+		&:focus {
+			border-color: #de1f16 !important;
+		}
+	}
+}
+.post_order_info {
+	max-width: 650px;
+	width: 100%;
+}
+@media only screen and (max-width: 767px) {
+	.pull-left {
+		display: block;
+	}
+	.post_order_wrap-main {
+		padding: 6%;
+	}
+	.tracking-status {
+		margin-bottom: 15px;
+		padding-bottom: 15px;
+		font-size: 13px;
+	}
+	.submit-button {
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+	.tracking-table {
+		border-bottom: 1px solid #ddd;
+		tr {
+            th {
+				display: none;
+			}
+			td {
+				&:before {
+					content: attr(data-rwd-label);
+					font-weight: 600;
+					font-family: "Montserrat", sans-serif;
+					font-size: 15px;
+					width: 50%;
+					text-align: left;
+                    display: inline-block;
+				}
+			}
+		}
+		td {
+			text-align: left;
+			display: inline-block;
+			width: 100%;
+			border-bottom: none;	
+		}
+	}
+}
+
+

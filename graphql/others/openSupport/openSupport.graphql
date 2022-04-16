@@ -1,0 +1,26 @@
+query openSupport(
+  $currentPage: Int
+  $pageSize: Int
+){
+  openSupport(
+    currentPage: $currentPage
+    pageSize: $pageSize
+  ){
+    page_info{
+      current_page
+      page_size
+      total_pages
+    }
+    tickets {
+      ticket_id
+      answer
+      creation_date
+      description
+      is_active
+      title
+      topic
+      order
+      customer_email
+    }
+  }
+}

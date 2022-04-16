@@ -1,0 +1,28 @@
+.payment-info-section{
+    border-bottom: 20px solid #F4F4F4;
+    padding-bottom: 70px; 
+}
+.payment_info_container{
+    .desc{
+        font-size: 14px;
+    }
+    .label-desc{
+        padding-right: 5px;
+    }
+    .add, .t-no{
+        color: #000;
+        font-weight: 600;
+    }
+} 
+@media(max-width:768px){
+    .payment-info-section{
+        padding-bottom: 30px;
+        border-bottom: 10px solid #f4f4f4;
+    }
+    .payment_info_container{
+        .desc{
+            font-size: 14px;
+        }
+    }
+
+}

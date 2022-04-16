@@ -1,0 +1,157 @@
+.ourbrands-wrapper {
+    border-bottom: 20px solid #f4f4f4;
+}
+.ourbrands-container {
+    margin-bottom: 50px;
+    .brand-title {
+        text-align: center;
+        margin: 45px 0 35px 0;
+        h3 {
+            font-weight: 600;
+            font-size: 30px;
+            text-transform: uppercase;
+            color: #000000;
+            margin: 0;
+        }
+    }
+    .brands-name {
+        display: grid;
+        display: -webkit-grid;
+        grid-template-columns: repeat(auto-fill, minmax(18%, 1fr));
+        -ms-grid-columns: repeat(auto-fill, minmax(18%, 1fr));
+        -webkit-grid-template-columns: repeat(auto-fill, minmax(18%, 1fr));
+        gap: 30px;
+        -webkit-grid-gap: 30px;
+        margin-bottom: 31px;
+        .brand {
+            background: #ffffff;
+            max-width: 100%;
+            width: 100%;
+            display: -ms-flexbox;
+            display: flex;
+            justify-content: center;
+            -ms-flex-pack: center;
+            -ms-flex-align: center;
+            align-items: center;
+            position: relative;
+            &:before,
+            &:after {
+                box-sizing: inherit;
+                content: '';
+                position: absolute;
+                border: 10px solid transparent;
+                width: 0;
+                height: 0;
+                pointer-events: none;
+            }
+            &:before {
+                top: 0;
+                left: 0;
+            }
+            &:after {
+                bottom: 0;
+                right: 0;
+            }
+            &:hover {
+                &:before,
+                &:after {
+                    width: 100%;
+                    height: 100%;
+                }
+                &:before {
+                    border-top-color: rgba(222, 31, 22, 0.8);
+                    border-right-color: rgba(222, 31, 22, 0.8);
+                    transition: width 0.25s ease-out, height 0.25s ease-out 0.25s;
+                }
+                &:after {
+                    border-bottom-color: rgba(222, 31, 22, 0.8);
+                    border-left-color: rgba(222, 31, 22, 0.8);
+                    transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+                    -webkit-transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s;
+                }
+            }
+        }
+        .brand-box {
+            border: 10px solid #f4f4f4;
+            max-width: 100%;
+            width: 100%;
+            display: -ms-flexbox;
+            display: flex;
+            justify-content: center;
+            -ms-flex-pack: center;
+            -ms-flex-align: center;
+            align-items: center;
+            padding: 10px;
+        }
+    }
+    .all-brnd-link {
+        text-align: center;
+        .all-brnd {
+            font-weight: normal;
+            font-size: 16px;
+            text-transform: uppercase;
+            color: #000000;
+            @include hover-focus {
+                color: $primary;
+            }
+        }
+    }
+}
+//====media query start here for responsive====//
+@media (max-width: 992px) {
+    .ourbrands-wrapper {
+        .container {
+            max-width: 100%;
+        }
+    }
+    .ourbrands-container {
+        .brands-name {
+            grid-template-columns: repeat(auto-fill, minmax(24%, 1fr));
+            -ms-grid-columns: repeat(auto-fill, minmax(24%, 1fr));
+            -webkit-grid-template-columns: repeat(auto-fill, minmax(24%, 1fr));
+        }
+    }
+}
+@media (max-width: 768px) {
+    .ourbrands-wrapper {
+        margin-bottom: 0;
+        border-bottom: 10px solid #f4f4f4;
+    }
+    .ourbrands-container {
+        margin-bottom: 18px;
+        .brands-name {
+            grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+            -ms-grid-columns: repeat(auto-fill, minmax(30%, 1fr));
+            -webkit-grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+            gap: 15px;
+            -webkit-grid-gap: 15px;
+            margin-bottom: 18px;
+            .brand {
+                border: 5px solid #f4f4f4;
+                text-align: center;
+                img {
+                    height: auto;
+                }
+                &:hover{
+                    &:before,
+                    &:after {
+                        box-sizing: inherit;
+                        content: unset;
+                    }
+                }
+            }
+        }
+        .brand-title {
+            margin: 20px 0 20px 0;
+            h3 {
+                font-weight: 600;
+                font-size: 16px;
+            }
+        }
+        .all-brnd-link {
+            .all-brnd {
+                font-size: 12px;
+            }
+        }
+    }
+}

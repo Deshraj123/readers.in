@@ -1,0 +1,10 @@
+query ccavenuepay_post_data(
+  $order_id: String!
+){
+  ccavenuepay_post_data(order_id: $order_id){
+    post_url
+    access_code
+    encrypted_data
+    transaction_url
+  }
+}

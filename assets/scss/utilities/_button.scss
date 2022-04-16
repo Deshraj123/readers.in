@@ -1,0 +1,18 @@
+@each $color, $value in $colors {
+  .btn-#{$color} {
+    color: map-get($colors, "white");
+    background-color: $value;
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+
+    @if $color == "orange" {
+      color: map-get($colors, "black");
+    }
+    @if $color == "white" {
+      color: map-get($colors, "black");
+    }
+    @include hover-focus {
+      background-color: darken($value, 10%);
+    }
+  }
+}
+

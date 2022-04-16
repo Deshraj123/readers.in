@@ -1,0 +1,246 @@
+/*
+** Base
+*/
+// @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap');
+
+/* Images should not go out of boundaries */
+img {
+  max-width: 100%;
+  outline: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Lazy load stuff */
+img:not([src]) {
+  visibility: hidden;
+}
+
+/* Fixes Firefox anomaly during image load */
+@-moz-document url-prefix() {
+  img:-moz-loading {
+    visibility: hidden;
+  }
+}
+.hide-element {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+[role="button"]{
+  &:focus{
+    outline: none;
+  }
+}
+/*
+** Bootstrap Resets
+*/
+
+// BS4 error fix when using .navbar-expand-*. Padding inconsistency on smaller viewports: https://github.com/twbs/bootstrap/issues/24726
+
+.navbar-expand > .container,
+.navbar-expand > .container-fluid,
+.navbar-expand-sm > .container,
+.navbar-expand-sm > .container-fluid,
+.navbar-expand-md > .container,
+.navbar-expand-md > .container-fluid,
+.navbar-expand-lg > .container,
+.navbar-expand-lg > .container-fluid,
+.navbar-expand-xl > .container,
+.navbar-expand-xl > .container-fluid {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.navbar-toggler {
+  border: 0;
+}
+@-webkit-keyframes fadeInRight{
+  0%{opacity:0;-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0)}
+  to{opacity:1;-webkit-transform:translateZ(0);transform:translateZ(0)}
+}
+@keyframes fadeInRight{
+  0%{opacity:0;-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0)}
+  to{opacity:1;-webkit-transform:translateZ(0);transform:translateZ(0)}
+}
+.fadeInRight{
+  -webkit-animation-name:fadeInRight;
+  animation-name:fadeInRight;
+}
+@-webkit-keyframes slideInRight{
+  0%{-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0);visibility:visible}
+  to{-webkit-transform:translateZ(0);transform:translateZ(0)}
+}
+@keyframes slideInRight{
+  0%{-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0);visibility:visible}
+  to{-webkit-transform:translateZ(0);transform:translateZ(0)}
+}
+.slideInRight{
+  -webkit-animation-name:slideInRight;
+  animation-name:slideInRight;
+}
+.hvr-underline-from-center {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  overflow: hidden;
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 51%;
+    right: 51%;
+    bottom: 0;
+    background: #DE1F16;
+    height: 2px;
+    -webkit-transition-property: left, right;
+    transition-property: left, right;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+
+  }
+  &:after{
+    content: "";
+    background: #414141;
+    height: 1px;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  &:active,
+  &:focus,
+  &:hover{
+    &:before{
+      left: 0;
+      right: 0;
+    }
+    &:after{
+      visibility: hidden;
+      left: 51%;
+      right: 51%;
+    }
+  }
+}
+.hvr-sweep-to-right {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #DE1F16;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  &:hover, &:focus, &:active {
+    color: #414141;
+    &:before{
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+    }
+  }
+}
+.hvr-sweep-to-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #DE1F16;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 100% 50%;
+    transform-origin: 100% 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  &:hover, &:focus, &:active {
+    color: #414141;
+    &:before{
+      -webkit-transform: scaleX(1);
+      transform: scaleX(1);
+    }
+  }
+}
+button{
+  border: none;
+  background: none;
+  @include hover-focus{
+      outline: none;
+  }
+}
+a{
+  @include hover-focus{
+     text-decoration: none;
+     outline: none;
+  }
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {              
+    appearance: textfield;
+    -moz-appearance: textfield;
+    -webkit-appearance: textfield;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+input[type="text"],input[type="email"],input[type="number"]{
+  &:focus{
+    border-color: $primary !important;
+  }
+}

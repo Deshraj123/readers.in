@@ -1,0 +1,21 @@
+query brands(
+  $filter: BrandFilter
+){
+  brands(filter: $filter){
+    brands{
+      letter_code
+      code
+      brand_id
+      label
+      cnt
+      display
+      alt
+      description
+      short_description
+      img
+      image
+      url_key
+    }
+    letters
+  }
+}

@@ -1,0 +1,23 @@
+.category-description-section {
+    padding: 30px 0;
+    border-bottom: 20px solid $gray01;
+    .catgry-detail {
+        .cate-info {
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 10px;
+        }
+        h3 {
+            font-size: 16px;
+            line-height: 25px;
+            color: $black;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+    }
+}
+@media(max-width: 768px) {
+    .category-description-section {
+        display: none;
+    }
+}

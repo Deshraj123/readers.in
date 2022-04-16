@@ -1,0 +1,115 @@
+.privacy-policy-section,
+.return-policy-section,
+.payment-info-section,
+.policies-security-section,
+.faq-section {
+    border-bottom: 20px solid #F4F4F4;
+    padding-bottom: 70px;
+}
+.policy-cintainer {
+    .page-title {
+        margin-bottom: 30px;
+    }
+    .desc {
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22px;
+        color: #414141;
+        margin-bottom: 10px;
+        .link-email-tel {
+            color: $primary;
+            &:hover {
+                color: $black;
+            }
+        }
+    }
+    .sub-title {
+        font-weight: 600;
+        font-size: 18px;
+        color: #000;
+    }
+    .desc-item {
+        list-style: none;
+        padding: 0;
+    }
+    .table-wrapper {
+        width: 100%;
+        .cookie-th {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 18px;
+            color: #000000;
+        }
+        .cookie-name-th,
+        .cookie-td {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 30px;
+            color: #414141;
+        }
+    }
+}
+.return_policy_container {
+    .desc-item {
+        list-style: decimal;
+        padding: 15px;
+    }
+    .sub-title {
+        font-size: 16px;
+    }
+}
+@media(max-width:768px) {
+    .privacy-policy-section,
+    .return-policy-section,
+    .payment-info-section,
+    .policies-security-section,
+    .faq-section {
+        padding-bottom: 30px;
+        border-bottom: 10px solid #f4f4f4;
+    }
+    .policy-cintainer {
+        .page-title {
+            margin-bottom: 20px;
+        }
+        .sub-title {
+            font-size: 16px;
+        }
+        .table-wrapper {
+            border: 0;
+            thead {
+                border: none;
+                clip: rect(0 0 0 0);
+                height: 1px;
+                margin: -1px;
+                overflow: hidden;
+                padding: 0;
+                position: absolute;
+                width: 1px;
+            }
+            tr {
+                display: block;
+                margin-bottom: .625em;
+            }
+            td {
+                border-bottom: 1px solid #ddd;
+                display: flex;
+                align-items: flex-start;
+                text-align: left;
+                justify-content: space-between;
+                flex-direction: column;
+            }
+            td::before {
+                content: attr(data-label);
+                float: left;
+                font-weight: 400;
+                font-size: 14px;
+                text-transform: uppercase;
+                color: #000;
+            }
+            .cookie-name-th {
+                display: none;
+            }
+        }
+    }
+}

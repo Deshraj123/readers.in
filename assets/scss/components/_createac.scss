@@ -1,0 +1,211 @@
+.createac-main-wrapper {
+    .container {
+        max-width: 100%;
+    }
+
+    .customer-createac-container {
+        display: -ms-flexbox;
+        display: flex;
+
+        .right-login-content {
+            .signup-section {
+                .user-ragistrac {
+                    display           : -ms-flexbox;
+                    display           : flex;
+                    -ms-flex-pack     : center;
+                    -ms-flex-align    : center;
+                    justify-content   : center;
+                    flex-direction    : column;
+                    -ms-flex-direction: column;
+                    margin            : 0 auto;
+                    width             : 100%;
+                    max-width         : 66%;
+
+                    .ragister-input {
+                        background           : $white;
+                        border               : 1px solid $gray02;
+                        padding              : 10px 15px;
+                        font-weight          : 400;
+                        font-size            : 12px;
+                        color                : $gray03;
+                        width                : 100%;
+                        max-width            : 100%;
+                        margin               : 0;
+                        -webkit-border-radius: 0;
+                        border-radius        : 0;
+                        appearance           : none;
+                        -moz-appearance      : textfield;
+                        -webkit-appearance   : textfield;
+                        -webkit-appearance   : textfield;
+
+                        &:focus {
+                            outline: none;
+                            border : 1px solid $primary;
+                        }
+                    }
+
+                    .input-control {
+                        margin-bottom: 18px;
+
+                        &.last-item {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.signup-successfully {
+    box-shadow      : 0px 3px 15px rgba(0, 0, 0, 0.25);
+    background-color: #fff;
+    max-width       : 600px;
+    width           : 100%;
+    text-align      : center;
+    margin          : 80px 0 80px 0;
+    transform       : translate(-25%, 0);
+    padding         : 0 20px;
+    display         : none;
+
+    .success-icon {
+        margin: 50px 0 20px 0;
+
+        .fal.fa-check-circle {
+            font-weight: 300;
+            font-size  : 70px;
+            color      : #4bb543;
+        }
+    }
+
+    .success-msg {
+        font-weight  : 400;
+        font-size    : 20px;
+        line-height  : 27px;
+        color        : $secondary;
+        margin-bottom: 38px;
+    }
+
+    .succ-user-name {
+        font-style   : italic;
+        font-weight  : 600;
+        font-size    : 20px;
+        color        : $secondary;
+        margin-bottom: 56px;
+    }
+
+    .continue-btn {
+        margin-bottom: 125px;
+
+        button {
+            padding         : 9px 20px;
+            font-weight     : 600;
+            font-size       : 18px;
+            text-transform  : uppercase;
+            color           : #fff;
+            background-color: $primary;
+            border          : none;
+            max-width       : 60.55%;
+            width           : 100%;
+            box-shadow      : 0px 5px 10px rgba(0, 0, 0, 0.25);
+        }
+    }
+}
+
+//====all media query start here====//
+@media (max-width: 1080px) {
+    .createac-main-wrapper {
+        .customer-createac-container {
+            .right-login-content {
+                .signup-section {
+                    .user-ragistrac {
+                        max-width: 100%;
+
+                        .ragister-input {
+                            max-width: 100%;
+                            padding  : 10px 15px;
+                        }
+                    }
+
+                    .continue-btn {
+                        button {
+                            max-width: 95%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .createac-main-wrapper {
+        .customer-createac-container {
+            .right-login-content {
+                .signup-section {
+                    .user-ragistrac {
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .signup-successfully {
+        .success-icon {
+            margin: 30px 0 20px 0;
+        }
+
+        .success-msg {
+            margin-bottom: 22px;
+            font-size    : 18px;
+        }
+
+        .succ-user-name {
+            margin-bottom: 30px;
+            font-size    : 18px;
+        }
+
+        .continue-btn {
+            margin-bottom: 30px;
+        }
+
+        .success-icon {
+            .fal.fa-check-circle {
+                font-size: 50px;
+            }
+        }
+    }
+
+    .createac-main-wrapper {
+        .customer-createac-container {
+            .right-login-content {
+                .signup-section {
+                    .user-ragistrac {
+                        max-width: 70%;
+
+                        .ragister-input {
+                            padding: 10px 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 474px) {
+    .createac-main-wrapper {
+        .customer-createac-container {
+            .right-login-content {
+                .signup-section {
+                    .user-ragistrac {
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

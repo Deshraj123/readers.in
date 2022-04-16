@@ -1,0 +1,210 @@
+.newslettar-main-wrapper {
+    width: 100%;
+    max-width: 100%;
+    background: $primary;
+    padding: 0;
+}
+.subscribe-newslettar-container {
+    .subscribe-error{
+    margin-top: 4px;
+    display: inline-block;
+    color: #fff;
+    font-size: 12px;
+    line-height: 12px;
+    }
+    padding: 33px 20px;
+    .newslettar-title {
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 41px;
+        text-align: center;
+        color: #fff;
+        margin-bottom: 36px;
+    }
+    .social-icons {
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: center;
+        -ms-flex-pack: center;
+        -ms-flex-align: center;
+        text-align: center;
+        margin-bottom: 0;
+        .social-icon-link {
+            background: #fff;
+            color: $primary;
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            display: -ms-flexbox;
+            display: flex;
+            justify-content: center;
+            -ms-flex-pack: center;
+            -ms-flex-align: center;
+            align-items: center;
+            margin: 0 6px;
+            font-size: 24px;
+            line-height: 26px;
+            border: 2px solid transparent;
+            -moz-transition: all 0.3s ease-in-out;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            @include hover-focus {
+                border: 2px solid $white;
+                color: $white;
+            }
+        }
+        .facebook {
+            @include hover-focus {
+                background: #4267B2;
+            }
+        }
+        .twitter {
+            @include hover-focus {
+                background: #00acee;
+            }
+        }
+        .skype {
+            @include hover-focus {
+                background: #00acee;
+            }
+        }
+        .whatsapp {
+            @include hover-focus {
+                background: #25D366;
+            }
+        }
+        .youtube {
+            @include hover-focus {
+                background: #FF0000;
+            }
+        }
+    }
+    .newslettar-email {
+        width: 100%;
+        display: -ms-flexbox;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        -ms-flex-pack: center;
+        -ms-flex-align: flex-start;
+        margin-bottom: 36px;
+        .control {
+            width: 100%;
+            max-width: 550px;
+            position: relative;
+            margin-right: 20px;
+            span {
+                margin-top: 4px;
+                display: inline-block;
+                color: #fff;
+                font-size: 12px;
+                line-height: 12px;
+            }
+        }
+        .input-email {
+            width: 100%;
+            padding: 0 15px;
+            font-size: 18px;
+            color: $gray02;
+            border: none;
+            height: 50px;
+            margin: 0;
+            -webkit-border-radius: 0;
+            -webkit-appearance: none;
+            -webkit-border-radius: 0;
+            border-radius: 0;
+
+            &:focus {
+                outline: none;
+            }
+        }
+         :-ms-input-placeholder {
+            color: #414141;
+        }
+         ::-ms-input-placeholder {
+            color: #414141;
+        }
+         ::placeholder {
+            color: #414141;
+        }
+        .subscribe-btn {
+            border: 2px solid #fff;
+            width: 100%;
+            max-width: 218px;
+            color: #fff;
+            font-weight: 600;
+            font-size: 18px;
+            text-align: center;
+            background: $primary;
+            height: 50px;
+            text-transform: uppercase;
+            -moz-transition: all 0.3s ease-in-out;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            @include hover-focus {
+                outline: none;
+                background: $white;
+                color: $primary;
+            }
+        }
+    }
+}
+//====media query start here for responsive====//
+@media (max-width: 768px) {
+    .subscribe-newslettar-container {
+        padding: 10px 0px 10px 0;
+        .newslettar-email {
+            margin-bottom: 5px;
+            align-items: end;
+            .control {
+                max-width: 100%;
+                margin-bottom: 15px;
+                margin-right: 15px;
+            }
+            .input-email {
+                padding: 0 15px;
+                font-size: 12px;
+                height: 35px;
+            }
+            .subscribe-btn {
+                max-width: 130px;
+                margin: 0 auto;
+                margin-bottom: 19px;
+                font-size: 14px;
+                height: 35px;
+            }
+        }
+        .social-icons {
+            margin-bottom: 20px;
+            .social-icon-link {
+                width: 35px;
+                height: 35px;
+                .s-icons {
+                    font-size: 20px;
+                }
+                .youtube.s-icons {
+                    font-size: 20px;
+                }
+            }
+        }
+        .newslettar-title {
+            font-weight: 600;
+            font-size: 18px;
+            margin-bottom: 22px;
+            line-height: 28px;
+            margin-top: 22px;
+        }
+    }
+}
+@media (max-width: 460px) {
+    .subscribe-newslettar-container {
+        .newslettar-email {
+            flex-direction: column;
+            -ms-flex-direction: column;
+            margin-right: 0;
+            .subscribe-btn {
+                max-width: 100%;
+            }
+        }
+    }
+}

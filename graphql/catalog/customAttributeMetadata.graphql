@@ -1,0 +1,14 @@
+query customAttributeMetadata($attributes: [AttributeInput!]!) {
+  customAttributeMetadata(attributes: $attributes) {
+    items {
+      attribute_code
+      attribute_type
+      entity_type
+      input_type
+      attribute_options{
+        label
+        value
+      }
+    }
+  }
+}

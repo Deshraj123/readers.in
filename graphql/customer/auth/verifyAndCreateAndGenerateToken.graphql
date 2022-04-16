@@ -1,0 +1,17 @@
+mutation verifyAndCreateAndGenerateToken(
+  $otp: String!
+  $mobile: String!
+  $name: String!
+  $email: String!
+  $last: String!
+){
+  verifyAndCreateAndGenerateToken(
+    otp: $otp
+    mobile: $mobile
+    name: $name
+    email: $email
+    last: $last
+  ){
+    token
+  }
+}

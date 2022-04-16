@@ -1,0 +1,550 @@
+query products($filter: ProductAttributeFilterInput, $pageSize: Int, $currentPage: Int, $search: String, $width: Int, $height: Int) {
+  products(filter: $filter, pageSize: $pageSize, currentPage: $currentPage, search: $search) {
+    items {
+      id
+      sku
+      name
+      type_id
+      stock_status
+      meta_title
+      meta_keyword
+      meta_description
+      special_from_date
+      special_price
+      special_to_date
+      review_count
+      reviews{
+        items{
+          nickname
+          summary
+          text
+          average_rating
+          ratings_breakdown{
+            name
+            value
+          }
+          created_at
+        }
+      }
+      apparel_size
+      hsn_code
+      art_supplies
+      asin
+      attribute_set_id
+      bag_capacity
+      bag_color
+      bag_dimensions
+      bag_material
+      board_size
+      boards_type
+      book_auth_pub
+      book_cover
+      book_lang
+      book_pages
+      bound_type
+      brand
+      canonical_url
+      cartridge_color
+      cartridge_number
+      cartridge_type
+      color
+      colour_apparel
+      colour_size_package
+      country_of_manufacture
+      created_at
+      data_storage
+      dispenser_type
+      envelopes_type
+      fevicryl_colour
+      file_color
+      file_size
+      file_type
+      genre
+      gift_message_available
+      ink_color
+      isbn
+      manufacturer
+      new_from_date
+      new_to_date
+      no_of_holes
+      no_of_pages
+      notebook_size
+      notebook_type
+      only_x_left_in_stock
+      options_container
+      page_yield
+      paper_color
+      paper_gsm
+      paper_size
+      paper_type
+      pen_type
+      pencil_lead_size
+      pencil_shade
+      pencil_type
+      pin_size
+      pkg_dtl
+      printer_catridges
+      printer_connectivity
+      printer_function
+      product_label
+      register_quire
+      register_type
+      ruling
+      shades
+      size
+      stapler_punches_type
+      swatch_image
+      tape_colour
+      tape_width
+      tissue_type
+      tissue_usage
+      toy_age
+      toys_category
+      toys_gender
+      toys_skillset
+      vendor_code
+      vendor_item_code
+      related_products{
+        id
+        sku
+        name
+        type_id
+        stock_status
+        special_price
+        review_count
+        url_key
+        url_path
+        image {
+          url
+          label
+        }
+        price {
+          minimalPrice {
+            amount {
+              value
+              currency
+            }
+          }
+          maximalPrice {
+            amount {
+              value
+              currency
+            }
+          }
+          regularPrice {
+            amount {
+              value
+              currency
+            }
+          }
+        }
+      }
+      short_description {
+        html
+      }
+      description {
+        html
+      }
+      image {
+        url
+        label
+      }
+      small_image {
+        url
+        label
+      }
+      thumbnail {
+        url
+        label
+      }
+      media_gallery{
+        url(
+          width: $width,
+          height: $height
+        )
+        label
+      }
+      media_gallery_entries {
+        id
+        media_type
+        label
+        position
+        disabled
+        types
+        file
+        content {
+          base64_encoded_data
+          type
+          name
+        }
+      }
+      canonical_url
+      url_key
+      url_path
+      url_suffix
+      price {
+        minimalPrice {
+          amount {
+            value
+            currency
+          }
+        }
+        maximalPrice {
+          amount {
+            value
+            currency
+          }
+        }
+        regularPrice {
+          amount {
+            value
+            currency
+          }
+        }
+      }
+      price_tiers{
+        discount {
+          amount_off
+          percent_off
+        }
+        final_price {
+          currency
+          value
+        }
+        quantity
+      }
+      ... on ConfigurableProduct {
+        configurable_options {
+          product_id
+          id
+          attribute_id_v2
+          label
+          position
+          use_default
+          attribute_code
+          values {
+            value_index
+            label
+            use_default_value
+          }
+        }
+        variants {
+          product {
+            id
+            sku
+            name
+            type_id
+            stock_status
+            meta_title
+            meta_keyword
+            meta_description
+            special_from_date
+            special_price
+            special_to_date
+            review_count
+            reviews{
+              items{
+                nickname
+                summary
+                text
+                average_rating
+                ratings_breakdown{
+                  name
+                  value
+                }
+                created_at
+              }
+            }
+            apparel_size
+            hsn_code
+            art_supplies
+            asin
+            attribute_set_id
+            bag_capacity
+            bag_color
+            bag_dimensions
+            bag_material
+            board_size
+            boards_type
+            book_auth_pub
+            book_cover
+            book_lang
+            book_pages
+            bound_type
+            brand
+            canonical_url
+            cartridge_color
+            cartridge_number
+            cartridge_type
+            color
+            colour_apparel
+            colour_size_package
+            country_of_manufacture
+            created_at
+            data_storage
+            dispenser_type
+            envelopes_type
+            fevicryl_colour
+            file_color
+            file_size
+            file_type
+            genre
+            gift_message_available
+            ink_color
+            isbn
+            manufacturer
+            new_from_date
+            new_to_date
+            no_of_holes
+            no_of_pages
+            notebook_size
+            notebook_type
+            only_x_left_in_stock
+            options_container
+            page_yield
+            paper_color
+            paper_gsm
+            paper_size
+            paper_type
+            pen_type
+            pencil_lead_size
+            pencil_shade
+            pencil_type
+            pin_size
+            pkg_dtl
+            printer_catridges
+            printer_connectivity
+            printer_function
+            product_label
+            register_quire
+            register_type
+            ruling
+            shades
+            size
+            stapler_punches_type
+            swatch_image
+            tape_colour
+            tape_width
+            tissue_type
+            tissue_usage
+            toy_age
+            toys_category
+            toys_gender
+            toys_skillset
+            vendor_code
+            vendor_item_code
+            related_products{
+              id
+              sku
+              name
+              type_id
+              stock_status
+              special_price
+              review_count
+              url_key
+              url_path
+              image {
+                url
+                label
+              }
+              price {
+                minimalPrice {
+                  amount {
+                    value
+                    currency
+                  }
+                }
+                maximalPrice {
+                  amount {
+                    value
+                    currency
+                  }
+                }
+                regularPrice {
+                  amount {
+                    value
+                    currency
+                  }
+                }
+              }
+            }
+            short_description {
+              html
+            }
+            description {
+              html
+            }
+            image {
+              url
+              label
+            }
+            small_image {
+              url
+              label
+            }
+            thumbnail {
+              url
+              label
+            }
+            product_links {
+              sku
+              link_type
+              linked_product_sku
+              linked_product_type
+              position
+            }
+            media_gallery{
+              url
+              label
+            }
+            media_gallery_entries {
+              id
+              media_type
+              label
+              position
+              disabled
+              types
+              file
+              content {
+                base64_encoded_data
+                type
+                name
+              }
+            }
+            canonical_url
+            url_key
+            url_path
+            url_suffix
+            price {
+              minimalPrice {
+                amount {
+                  value
+                  currency
+                }
+              }
+              maximalPrice {
+                amount {
+                  value
+                  currency
+                }
+              }
+              regularPrice {
+                amount {
+                  value
+                  currency
+                }
+              }
+            }
+            price_tiers{
+              discount {
+                amount_off
+                percent_off
+              }
+              final_price {
+                currency
+                value
+              }
+              quantity
+            }
+          }
+          attributes {
+            label
+            code
+            value_index
+          }
+
+        }
+      }
+      ... on GroupedProduct {
+        items{
+          qty
+          position
+          product{
+            id
+            sku
+            name
+            type_id
+            stock_status
+            special_from_date
+            special_price
+            special_to_date
+            price {
+              minimalPrice {
+                amount {
+                  value
+                  currency
+                }
+              }
+              maximalPrice {
+                amount {
+                  value
+                  currency
+                }
+              }
+              regularPrice {
+                amount {
+                  value
+                  currency
+                }
+              }
+            }
+          }
+        }
+      }
+      ... on BundleProduct {
+        price_range {
+          minimum_price {
+            final_price {
+              currency
+              value
+            }
+          }
+          maximum_price {
+            final_price {
+              currency
+              value
+            }
+          }
+        }
+        items{
+          option_id
+          position
+          required
+          sku
+          title
+          type
+          options{
+            can_change_quantity
+            id
+            is_default
+            label
+            quantity
+            price
+            product{
+              id
+              sku
+              price_range {
+                maximum_price {
+                  final_price {
+                    currency
+                    value
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    aggregations {
+      attribute_code
+      count
+      label
+      options {
+        count
+        label
+        value
+      }
+    }
+  }
+}

@@ -1,0 +1,52 @@
+/*Bootstrap & Variables*/
+@import 'base/fonts.scss';
+@import 'base/variables.scss';
+@import '~bootstrap/scss/bootstrap.scss';
+@import '~bootstrap-vue/src/index.scss';
+@import "fontawesome/fontawesome.scss";
+@import 'base/base.scss';
+/*Utilities*/
+@import 'utilities/bg.scss';
+@import 'utilities/button.scss';
+@import 'utilities/text.scss';
+/* Components*/
+@import "components/header.scss";
+@import "components/footer.scss";
+@import "components/newsletter.scss";
+@import "components/officesupplies.scss";
+@import "components/shopcategory.scss";
+@import "components/ourbrands.scss";
+@import "components/minicart.scss";
+@import "components/login.scss";
+@import "components/createac.scss";
+@import "components/contactus.scss";
+@import "components/quotation.scss";
+@import "components/checkoutcart.scss";
+@import "components/checkoutfooter.scss";
+@import "components/message.scss";
+@import "components/loader.scss";
+@import "components/emptycart.scss";
+@import "components/rating.scss";
+@import "components/notfound.scss";
+@import "components/safari.scss";
+@import "components/tracking.scss";
+/*Pages*/
+@import "pages/home.scss";
+@import "pages/category/category.scss";
+@import "pages/category/categorydescription.scss";
+@import "pages/category/Breadcrumbs.scss";
+@import "pages/category/subcategory.scss";
+@import "pages/product/product.scss";
+@import "pages/brand/featuredbrand.scss";
+@import "pages/myaccount/myaccount.scss";
+@import "pages/checkout/checkout.scss";
+@import "pages/thankyou/thankyou.scss";
+@import "pages/checkout/progressbar.scss";
+@import "pages/checkout/checkoutsidebar.scss";
+@import "pages/checkout/shippingmethod.scss";
+@import "pages/shippingaddress/shippingaddress.scss";
+@import "pages/checkout/checkoutpaymentmethod.scss";
+@import "pages/privacypolicy.scss";
+@import"pages/paymentinfo.scss";
+@import "pages/notfound404.scss";
+@import "pages/sitemap";

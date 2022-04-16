@@ -1,0 +1,13 @@
+query tracking(
+  $input: InputTracking
+) {
+  tracking(
+    input: $input
+  ) {
+    carrier_code
+    order_number
+    title
+    track_number
+    url
+  }
+}
